@@ -12,9 +12,7 @@
   <img src="https://drive.google.com/uc?export=view&id=13rteA5aTZ8_vbt_blNzOcHEVB5tKz6KR" alt="Architecture Diagram" width="900">
 </p>
 
-<p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=13rteA5aTZ8_vbt_blNzOcHEVB5tKz6KR" alt="Architecture Diagram" width="900">
-</p>
+
 
 ---
 
@@ -45,6 +43,36 @@ climashield/
 ```
 
 ---
+
+
+# Demo
+
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1bV-yaaoiHroBiwqZCNn46Sp80Qs7Q2cS" 
+       alt="System Architecture Diagram" 
+       width="1000">
+</p>
+
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1ZG-n6HjoNGdOL57DGJzwDQSkJQFGBr2x"
+       alt="Architecture Diagram"
+       width="1000">
+</p>
+
+
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1R_kglOiHs9wLRz6n5ssZsdXpuvk4Ju6y"
+       alt="System Architecture Diagram"
+       width="1000">
+</p>
+
+
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=19Go_5vjKKMLUbUtisSTbgv8QflbdMwaE"
+       alt="System Architecture Diagram"
+       width="1000">
+</p>
+
 
 ## 🚀 Quick Start
 
