@@ -1,7 +1,7 @@
 {
-  "total_collected": 154.0,
+  "total_collected": 230.0,
   "total_paid_out": 30.0,
-  "available_liquidity": 124.0,
+  "available_liquidity": 200.0,
   "reserved_for_claims": 0,
   "transactions": [
     {
@@ -77,6 +77,22 @@
       "amount": 34.0,
       "tx_hash": "0x428f5dd84cdb721c7658cc4fe0a2113ac7556bfc46c659cffdaee3f92829fc5e",
       "timestamp": "2026-03-15T12:00:11.044536Z"
+    },
+    {
+      "type": "premium_deposit",
+      "payment_id": "PAY-6B79829F",
+      "policy_id": "CS1015",
+      "amount": 35.0,
+      "tx_hash": "0x0cc076efe0ad1d24872b663a340ecf481ba1676a3776c49825089961cdb790ea",
+      "timestamp": "2026-03-15T12:21:20.350299Z"
+    },
+    {
+      "type": "premium_deposit",
+      "payment_id": "PAY-91B0F355",
+      "policy_id": "CS1016",
+      "amount": 41.0,
+      "tx_hash": "0x6621d1a3518133ebaf4a44bf3fb834254570a676b132a83a25e8528a82f955dd",
+      "timestamp": "2026-03-15T12:29:11.693620Z"
     }
   ]
 }

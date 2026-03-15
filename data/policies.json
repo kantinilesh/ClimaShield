@@ -118,5 +118,45 @@
     "premium_weekly": 34.0,
     "coverage_amount": 10.0,
     "status": "active"
+  },
+  {
+    "policy_id": "CS1013",
+    "user_wallet": null,
+    "location": "Delhi",
+    "coverage_type": "aqi",
+    "trigger_threshold": 250.0,
+    "premium_weekly": 36.0,
+    "coverage_amount": 10.0,
+    "status": "active"
+  },
+  {
+    "policy_id": "CS1014",
+    "user_wallet": null,
+    "location": "kochi",
+    "coverage_type": "rainfall",
+    "trigger_threshold": 40.0,
+    "premium_weekly": 39.0,
+    "coverage_amount": 10.0,
+    "status": "active"
+  },
+  {
+    "policy_id": "CS1015",
+    "user_wallet": null,
+    "location": "Mumbai",
+    "coverage_type": "rainfall",
+    "trigger_threshold": 40.0,
+    "premium_weekly": 35.0,
+    "coverage_amount": 10.0,
+    "status": "active"
+  },
+  {
+    "policy_id": "CS1016",
+    "user_wallet": null,
+    "location": "Cherrapunji",
+    "coverage_type": "rainfall",
+    "trigger_threshold": 40.0,
+    "premium_weekly": 41.0,
+    "coverage_amount": 10.0,
+    "status": "active"
   }
 ]

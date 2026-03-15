@@ -105,16 +105,17 @@ class InsuranceCoordinatorAgent:
         return policy
 
     def get_policy(self, policy_id: str) -> Optional[Policy]:
-        """Retrieve a policy by its ID."""
+        """Retrieve a policy by its ID (case-insensitive)."""
         policies = self._load_policies()
+        pid = policy_id.upper().strip()
         for p in policies:
-            if p["policy_id"] == policy_id:
+            if p["policy_id"].upper() == pid:
                 return Policy(**p)
         return None
 
     def check_policy_status(self, policy_id: str) -> Optional[dict]:
         """Get the current status of a policy."""
-        policy = self.get_policy(policy_id)
+        policy = self.get_policy(policy_id.strip())
         if policy is None:
             return None
         return {
