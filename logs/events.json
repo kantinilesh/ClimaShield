@@ -1,0 +1,382 @@
+[
+  {
+    "timestamp": "2026-03-15T10:37:58.965349Z",
+    "category": "system",
+    "message": "ClimaShield v0.3.0 starting up",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:39:03.272427Z",
+    "category": "simulation",
+    "message": "Simulating rainfall in Mumbai",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:39:03.274107Z",
+    "category": "simulation_claim",
+    "message": "SIM claim: CS1001 \u2192 0 USDC",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:39:03.274606Z",
+    "category": "simulation_claim",
+    "message": "SIM claim: CS1002 \u2192 0 USDC",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:39:03.275349Z",
+    "category": "simulation_claim",
+    "message": "SIM claim: CS1006 \u2192 0 USDC",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:39:29.050110Z",
+    "category": "policy_create",
+    "message": "Policy CS1008 created for TestCity",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:39:29.249327Z",
+    "category": "premium_payment",
+    "message": "Premium collected: 42.0 USDC for CS1008",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:39:29.290219Z",
+    "category": "simulation",
+    "message": "Simulating rainfall in TestCity",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:39:29.294904Z",
+    "category": "simulation_claim",
+    "message": "SIM claim: CS1008 \u2192 10.0 USDC",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:39:29.339039Z",
+    "category": "oracle_worker",
+    "message": "Monitoring cycle started",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:39:30.387074Z",
+    "category": "oracle_worker",
+    "message": "Cycle complete: 6 cities, 0 triggers",
+    "level": "info",
+    "data": {
+      "timestamp": "2026-03-15T10:39:30.387064Z",
+      "cities_monitored": 6,
+      "policies_checked": 8,
+      "triggers_detected": 0,
+      "results": []
+    }
+  },
+  {
+    "timestamp": "2026-03-15T10:48:02.426873Z",
+    "category": "system",
+    "message": "ClimaShield shutting down",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:48:03.024541Z",
+    "category": "system",
+    "message": "ClimaShield v0.3.0 starting up",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:48:03.330516Z",
+    "category": "system",
+    "message": "ClimaShield shutting down",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:49:57.749532Z",
+    "category": "system",
+    "message": "ClimaShield v0.3.0 starting up",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:53:59.433444Z",
+    "category": "system",
+    "message": "ClimaShield shutting down",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:54:07.287359Z",
+    "category": "system",
+    "message": "ClimaShield v0.3.0 starting up",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:56:07.356049Z",
+    "category": "system",
+    "message": "ClimaShield shutting down",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:56:08.201778Z",
+    "category": "system",
+    "message": "ClimaShield v0.3.0 starting up",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:56:30.495853Z",
+    "category": "premium_payment",
+    "message": "Premium collected: 42.0 USDC for CS1008",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:56:44.632324Z",
+    "category": "simulation",
+    "message": "Simulating rainfall in TestCity",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:56:48.860193Z",
+    "category": "simulation_claim",
+    "message": "SIM claim: CS1008 \u2192 10.0 USDC",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T10:59:13.062176Z",
+    "category": "system",
+    "message": "ClimaShield shutting down",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:06:19.805739Z",
+    "category": "system",
+    "message": "ClimaShield v0.3.0 starting up \u2013 DB initialized",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:07:02.372001Z",
+    "category": "system",
+    "message": "ClimaShield shutting down",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:07:03.478617Z",
+    "category": "system",
+    "message": "ClimaShield v0.3.0 starting up \u2013 DB initialized",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:12:03.528058Z",
+    "category": "oracle_worker",
+    "message": "Monitoring cycle started",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:12:05.247910Z",
+    "category": "oracle_worker",
+    "message": "Cycle complete: 6 cities, 0 triggers",
+    "level": "info",
+    "data": {
+      "timestamp": "2026-03-15T11:12:05.247898Z",
+      "cities_monitored": 6,
+      "policies_checked": 8,
+      "triggers_detected": 0,
+      "results": []
+    }
+  },
+  {
+    "timestamp": "2026-03-15T11:12:27.565734Z",
+    "category": "system",
+    "message": "ClimaShield shutting down",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:12:28.853013Z",
+    "category": "system",
+    "message": "ClimaShield v0.3.0 starting up \u2013 DB initialized",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:12:42.271070Z",
+    "category": "policy_create",
+    "message": "Policy CS1009 created for TestDeploy",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:12:42.292872Z",
+    "category": "simulation",
+    "message": "Simulating rainfall in TestDeploy",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:12:44.866585Z",
+    "category": "simulation_claim",
+    "message": "SIM claim: CS1009 \u2192 10.0 USDC",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:12:44.989759Z",
+    "category": "oracle_worker",
+    "message": "Monitoring cycle started",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:12:46.598143Z",
+    "category": "oracle_worker",
+    "message": "Cycle complete: 7 cities, 0 triggers",
+    "level": "info",
+    "data": {
+      "timestamp": "2026-03-15T11:12:46.597930Z",
+      "cities_monitored": 7,
+      "policies_checked": 9,
+      "triggers_detected": 0,
+      "results": []
+    }
+  },
+  {
+    "timestamp": "2026-03-15T11:17:28.938378Z",
+    "category": "oracle_worker",
+    "message": "Monitoring cycle started",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:17:30.781057Z",
+    "category": "oracle_worker",
+    "message": "Cycle complete: 7 cities, 0 triggers",
+    "level": "info",
+    "data": {
+      "timestamp": "2026-03-15T11:17:30.781042Z",
+      "cities_monitored": 7,
+      "policies_checked": 9,
+      "triggers_detected": 0,
+      "results": []
+    }
+  },
+  {
+    "timestamp": "2026-03-15T11:22:29.023247Z",
+    "category": "oracle_worker",
+    "message": "Monitoring cycle started",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:22:30.467685Z",
+    "category": "oracle_worker",
+    "message": "Cycle complete: 8 cities, 0 triggers",
+    "level": "info",
+    "data": {
+      "timestamp": "2026-03-15T11:22:30.467633Z",
+      "cities_monitored": 8,
+      "policies_checked": 10,
+      "triggers_detected": 0,
+      "results": []
+    }
+  },
+  {
+    "timestamp": "2026-03-15T11:25:58.909277Z",
+    "category": "simulation",
+    "message": "Simulating rainfall in Mumbai",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:25:58.925395Z",
+    "category": "simulation_claim",
+    "message": "SIM claim: CS1001 \u2192 0 USDC",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:25:58.926655Z",
+    "category": "simulation_claim",
+    "message": "SIM claim: CS1002 \u2192 0 USDC",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:25:58.927745Z",
+    "category": "simulation_claim",
+    "message": "SIM claim: CS1006 \u2192 0 USDC",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:27:28.929873Z",
+    "category": "oracle_worker",
+    "message": "Monitoring cycle started",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:27:30.243966Z",
+    "category": "oracle_worker",
+    "message": "Cycle complete: 8 cities, 0 triggers",
+    "level": "info",
+    "data": {
+      "timestamp": "2026-03-15T11:27:30.243962Z",
+      "cities_monitored": 8,
+      "policies_checked": 10,
+      "triggers_detected": 0,
+      "results": []
+    }
+  },
+  {
+    "timestamp": "2026-03-15T11:31:15.471364Z",
+    "category": "system",
+    "message": "ClimaShield shutting down",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:31:17.922198Z",
+    "category": "system",
+    "message": "ClimaShield v0.3.0 starting up \u2013 DB initialized",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:31:56.807646Z",
+    "category": "system",
+    "message": "ClimaShield shutting down",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:31:58.857474Z",
+    "category": "system",
+    "message": "ClimaShield v0.3.0 starting up \u2013 DB initialized",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:36:59.003239Z",
+    "category": "oracle_worker",
+    "message": "Monitoring cycle started",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:37:00.937671Z",
+    "category": "oracle_worker",
+    "message": "Cycle complete: 8 cities, 0 triggers",
+    "level": "info",
+    "data": {
+      "timestamp": "2026-03-15T11:37:00.937652Z",
+      "cities_monitored": 8,
+      "policies_checked": 10,
+      "triggers_detected": 0,
+      "results": []
+    }
+  },
+  {
+    "timestamp": "2026-03-15T11:41:58.923681Z",
+    "category": "oracle_worker",
+    "message": "Monitoring cycle started",
+    "level": "info"
+  },
+  {
+    "timestamp": "2026-03-15T11:42:00.582228Z",
+    "category": "oracle_worker",
+    "message": "Cycle complete: 8 cities, 0 triggers",
+    "level": "info",
+    "data": {
+      "timestamp": "2026-03-15T11:42:00.582198Z",
+      "cities_monitored": 8,
+      "policies_checked": 10,
+      "triggers_detected": 0,
+      "results": []
+    }
+  },
+  {
+    "timestamp": "2026-03-15T11:43:33.427837Z",
+    "category": "system",
+    "message": "ClimaShield shutting down",
+    "level": "info"
+  }
+]

@@ -1,0 +1,108 @@
+version: "3.8"
+
+services:
+  # ── PostgreSQL Database ────────────────────────────────────────
+  postgres:
+    image: postgres:14-alpine
+    container_name: climashield-db
+    environment:
+      POSTGRES_DB: climashield
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-climashield_secret}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d climashield"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Redis (optional job queue) ─────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: climashield-redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  # ── FastAPI Backend ────────────────────────────────────────────
+  backend:
+    build: .
+    container_name: climashield-api
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://admin:${POSTGRES_PASSWORD:-climashield_secret}@postgres:5432/climashield
+      WEATHER_API_KEY: ${WEATHER_API_KEY}
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN}
+      ERC8004_AGENT_ID: ${ERC8004_AGENT_ID:-200}
+      ERC8004_REGISTRY: ${ERC8004_REGISTRY}
+      GOATX402_API_URL: ${GOATX402_API_URL}
+      GOATX402_MERCHANT_ID: ${GOATX402_MERCHANT_ID}
+      GOATX402_API_KEY: ${GOATX402_API_KEY}
+      GOATX402_API_SECRET: ${GOATX402_API_SECRET}
+      RECEIVE_WALLET: ${RECEIVE_WALLET}
+      GOAT_RPC_URL: ${GOAT_RPC_URL:-https://rpc.testnet3.goat.network}
+      GOAT_CHAIN_ID: ${GOAT_CHAIN_ID:-48816}
+      GOAT_PRIVATE_KEY: ${GOAT_PRIVATE_KEY}
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # ── Background Worker (Oracle Monitoring) ──────────────────────
+  worker:
+    build: .
+    container_name: climashield-worker
+    command: ["python", "-m", "workers.oracle_worker"]
+    environment:
+      DATABASE_URL: postgresql://admin:${POSTGRES_PASSWORD:-climashield_secret}@postgres:5432/climashield
+      WEATHER_API_KEY: ${WEATHER_API_KEY}
+      GOATX402_API_URL: ${GOATX402_API_URL}
+      GOATX402_MERCHANT_ID: ${GOATX402_MERCHANT_ID}
+      GOATX402_API_KEY: ${GOATX402_API_KEY}
+      GOATX402_API_SECRET: ${GOATX402_API_SECRET}
+      RECEIVE_WALLET: ${RECEIVE_WALLET}
+      GOAT_RPC_URL: ${GOAT_RPC_URL:-https://rpc.testnet3.goat.network}
+      GOAT_CHAIN_ID: ${GOAT_CHAIN_ID:-48816}
+      GOAT_PRIVATE_KEY: ${GOAT_PRIVATE_KEY}
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # ── Telegram Bot ───────────────────────────────────────────────
+  telegram:
+    build: .
+    container_name: climashield-bot
+    command: ["python", "telegram/bot.py"]
+    environment:
+      API_URL: http://backend:8000
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN}
+      WEATHER_API_KEY: ${WEATHER_API_KEY}
+      GOATX402_API_URL: ${GOATX402_API_URL}
+      GOATX402_MERCHANT_ID: ${GOATX402_MERCHANT_ID}
+      GOATX402_API_KEY: ${GOATX402_API_KEY}
+      GOATX402_API_SECRET: ${GOATX402_API_SECRET}
+      RECEIVE_WALLET: ${RECEIVE_WALLET}
+      GOAT_RPC_URL: ${GOAT_RPC_URL:-https://rpc.testnet3.goat.network}
+      GOAT_PRIVATE_KEY: ${GOAT_PRIVATE_KEY}
+    depends_on:
+      backend:
+        condition: service_started
+    restart: unless-stopped
+
+volumes:
+  pgdata:

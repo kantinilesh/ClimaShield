@@ -1,0 +1,425 @@
+[
+  {
+    "dataset_id": "oracle_20260315_103903_mumbai_rainfall",
+    "event_type": "rainfall",
+    "value": 45.0,
+    "threshold": 40.0,
+    "timestamp": "2026-03-15T10:39:03.272977Z",
+    "location": "Mumbai",
+    "weather_snapshot": {
+      "city": "Mumbai",
+      "rain_mm": 45.0,
+      "temperature": 28.0,
+      "humidity": 95,
+      "source": "simulator",
+      "timestamp": "2026-03-15T10:39:03.271935Z"
+    },
+    "validation": {
+      "valid": false,
+      "confidence": 0.8,
+      "checks": {
+        "timestamp": {
+          "passed": true,
+          "detail": "No timestamp \u2014 assumed fresh (just fetched)"
+        },
+        "source": {
+          "passed": false,
+          "detail": "Source 'simulator' is not in trusted sources"
+        },
+        "location": {
+          "passed": true,
+          "detail": "Location matches: Mumbai"
+        },
+        "plausibility": {
+          "passed": true,
+          "detail": "All values within plausible ranges"
+        }
+      }
+    },
+    "status": "verified",
+    "storage_layer": "lazai_local"
+  },
+  {
+    "dataset_id": "oracle_20260315_103903_mumbai_rainfall",
+    "event_type": "rainfall",
+    "value": 45.0,
+    "threshold": 40.0,
+    "timestamp": "2026-03-15T10:39:03.274295Z",
+    "location": "Mumbai",
+    "weather_snapshot": {
+      "city": "Mumbai",
+      "rain_mm": 45.0,
+      "temperature": 28.0,
+      "humidity": 95,
+      "source": "simulator",
+      "timestamp": "2026-03-15T10:39:03.271935Z"
+    },
+    "validation": {
+      "valid": false,
+      "confidence": 0.8,
+      "checks": {
+        "timestamp": {
+          "passed": true,
+          "detail": "No timestamp \u2014 assumed fresh (just fetched)"
+        },
+        "source": {
+          "passed": false,
+          "detail": "Source 'simulator' is not in trusted sources"
+        },
+        "location": {
+          "passed": true,
+          "detail": "Location matches: Mumbai"
+        },
+        "plausibility": {
+          "passed": true,
+          "detail": "All values within plausible ranges"
+        }
+      }
+    },
+    "status": "verified",
+    "storage_layer": "lazai_local"
+  },
+  {
+    "dataset_id": "oracle_20260315_103903_mumbai_rainfall",
+    "event_type": "rainfall",
+    "value": 45.0,
+    "threshold": 40.0,
+    "timestamp": "2026-03-15T10:39:03.274863Z",
+    "location": "Mumbai",
+    "weather_snapshot": {
+      "city": "Mumbai",
+      "rain_mm": 45.0,
+      "temperature": 28.0,
+      "humidity": 95,
+      "source": "simulator",
+      "timestamp": "2026-03-15T10:39:03.271935Z"
+    },
+    "validation": {
+      "valid": false,
+      "confidence": 0.8,
+      "checks": {
+        "timestamp": {
+          "passed": true,
+          "detail": "No timestamp \u2014 assumed fresh (just fetched)"
+        },
+        "source": {
+          "passed": false,
+          "detail": "Source 'simulator' is not in trusted sources"
+        },
+        "location": {
+          "passed": true,
+          "detail": "Location matches: Mumbai"
+        },
+        "plausibility": {
+          "passed": true,
+          "detail": "All values within plausible ranges"
+        }
+      }
+    },
+    "status": "verified",
+    "storage_layer": "lazai_local"
+  },
+  {
+    "dataset_id": "oracle_20260315_103929_testcity_rainfall",
+    "event_type": "rainfall",
+    "value": 50.0,
+    "threshold": 40.0,
+    "timestamp": "2026-03-15T10:39:29.290617Z",
+    "location": "TestCity",
+    "weather_snapshot": {
+      "city": "TestCity",
+      "rain_mm": 50.0,
+      "temperature": 28.0,
+      "humidity": 95,
+      "source": "simulator",
+      "timestamp": "2026-03-15T10:39:29.290123Z"
+    },
+    "validation": {
+      "valid": false,
+      "confidence": 0.8,
+      "checks": {
+        "timestamp": {
+          "passed": true,
+          "detail": "No timestamp \u2014 assumed fresh (just fetched)"
+        },
+        "source": {
+          "passed": false,
+          "detail": "Source 'simulator' is not in trusted sources"
+        },
+        "location": {
+          "passed": true,
+          "detail": "Location matches: TestCity"
+        },
+        "plausibility": {
+          "passed": true,
+          "detail": "All values within plausible ranges"
+        }
+      }
+    },
+    "status": "verified",
+    "storage_layer": "lazai_local"
+  },
+  {
+    "dataset_id": "oracle_20260315_103929_testcity_claim_payout",
+    "event_type": "claim_payout",
+    "value": 10.0,
+    "threshold": 0,
+    "timestamp": "2026-03-15T10:39:29.294394Z",
+    "location": "TestCity",
+    "weather_snapshot": {
+      "claim_id": "CLM-SIM-BBF6BD",
+      "policy_id": "CS1008",
+      "tx_hash": "0xf0ec058788322c5f0317b2ca8bfb77a7f6696a0ff58ced6948a35561fd44680c",
+      "trigger_event": "rainfall_threshold_exceeded (actual: 50.0mm > threshold: 40.0mm)"
+    },
+    "validation": {
+      "valid": true,
+      "confidence": 1.0,
+      "type": "payment_proof"
+    },
+    "status": "verified",
+    "storage_layer": "lazai_local"
+  },
+  {
+    "dataset_id": "oracle_20260315_105644_testcity_rainfall",
+    "event_type": "rainfall",
+    "value": 50.0,
+    "threshold": 40.0,
+    "timestamp": "2026-03-15T10:56:44.633197Z",
+    "location": "TestCity",
+    "weather_snapshot": {
+      "city": "TestCity",
+      "rain_mm": 50.0,
+      "temperature": 28.0,
+      "humidity": 95,
+      "source": "simulator",
+      "timestamp": "2026-03-15T10:56:44.631859Z"
+    },
+    "validation": {
+      "valid": false,
+      "confidence": 0.8,
+      "checks": {
+        "timestamp": {
+          "passed": true,
+          "detail": "No timestamp \u2014 assumed fresh (just fetched)"
+        },
+        "source": {
+          "passed": false,
+          "detail": "Source 'simulator' is not in trusted sources"
+        },
+        "location": {
+          "passed": true,
+          "detail": "Location matches: TestCity"
+        },
+        "plausibility": {
+          "passed": true,
+          "detail": "All values within plausible ranges"
+        }
+      }
+    },
+    "status": "verified",
+    "storage_layer": "lazai_local"
+  },
+  {
+    "dataset_id": "oracle_20260315_105648_testcity_claim_payout",
+    "event_type": "claim_payout",
+    "value": 10.0,
+    "threshold": 0,
+    "timestamp": "2026-03-15T10:56:48.856902Z",
+    "location": "TestCity",
+    "weather_snapshot": {
+      "claim_id": "CLM-SIM-D701A8",
+      "policy_id": "CS1008",
+      "tx_hash": "0xff9e3679a628c78eb5d8b90af7cc3cf18bc940f4db9a55988594bf6d73244458",
+      "trigger_event": "rainfall_threshold_exceeded (actual: 50.0mm > threshold: 40.0mm)"
+    },
+    "validation": {
+      "valid": true,
+      "confidence": 1.0,
+      "type": "payment_proof"
+    },
+    "status": "verified",
+    "storage_layer": "lazai_local"
+  },
+  {
+    "dataset_id": "oracle_20260315_111242_testdeploy_rainfall",
+    "event_type": "rainfall",
+    "value": 50.0,
+    "threshold": 40.0,
+    "timestamp": "2026-03-15T11:12:42.293607Z",
+    "location": "TestDeploy",
+    "weather_snapshot": {
+      "city": "TestDeploy",
+      "rain_mm": 50.0,
+      "temperature": 28.0,
+      "humidity": 95,
+      "source": "simulator",
+      "timestamp": "2026-03-15T11:12:42.292749Z"
+    },
+    "validation": {
+      "valid": false,
+      "confidence": 0.8,
+      "checks": {
+        "timestamp": {
+          "passed": true,
+          "detail": "No timestamp \u2014 assumed fresh (just fetched)"
+        },
+        "source": {
+          "passed": false,
+          "detail": "Source 'simulator' is not in trusted sources"
+        },
+        "location": {
+          "passed": true,
+          "detail": "Location matches: TestDeploy"
+        },
+        "plausibility": {
+          "passed": true,
+          "detail": "All values within plausible ranges"
+        }
+      }
+    },
+    "status": "verified",
+    "storage_layer": "lazai_local"
+  },
+  {
+    "dataset_id": "oracle_20260315_111244_testdeploy_claim_payout",
+    "event_type": "claim_payout",
+    "value": 10.0,
+    "threshold": 0,
+    "timestamp": "2026-03-15T11:12:44.863525Z",
+    "location": "TestDeploy",
+    "weather_snapshot": {
+      "claim_id": "CLM-SIM-5A5C35",
+      "policy_id": "CS1009",
+      "tx_hash": "0xb2784f09687aad7623973e4add5439d897f8fddfe00bc2580628c9e625e8fa89",
+      "trigger_event": "rainfall_threshold_exceeded (actual: 50.0mm > threshold: 40.0mm)"
+    },
+    "validation": {
+      "valid": true,
+      "confidence": 1.0,
+      "type": "payment_proof"
+    },
+    "status": "verified",
+    "storage_layer": "lazai_local"
+  },
+  {
+    "dataset_id": "oracle_20260315_112558_mumbai_rainfall",
+    "event_type": "rainfall",
+    "value": 50.0,
+    "threshold": 40.0,
+    "timestamp": "2026-03-15T11:25:58.917649Z",
+    "location": "Mumbai",
+    "weather_snapshot": {
+      "city": "Mumbai",
+      "rain_mm": 50.0,
+      "temperature": 28.0,
+      "humidity": 95,
+      "source": "simulator",
+      "timestamp": "2026-03-15T11:25:58.908550Z"
+    },
+    "validation": {
+      "valid": false,
+      "confidence": 0.8,
+      "checks": {
+        "timestamp": {
+          "passed": true,
+          "detail": "No timestamp \u2014 assumed fresh (just fetched)"
+        },
+        "source": {
+          "passed": false,
+          "detail": "Source 'simulator' is not in trusted sources"
+        },
+        "location": {
+          "passed": true,
+          "detail": "Location matches: Mumbai"
+        },
+        "plausibility": {
+          "passed": true,
+          "detail": "All values within plausible ranges"
+        }
+      }
+    },
+    "status": "verified",
+    "storage_layer": "lazai_local"
+  },
+  {
+    "dataset_id": "oracle_20260315_112558_mumbai_rainfall",
+    "event_type": "rainfall",
+    "value": 50.0,
+    "threshold": 40.0,
+    "timestamp": "2026-03-15T11:25:58.925811Z",
+    "location": "Mumbai",
+    "weather_snapshot": {
+      "city": "Mumbai",
+      "rain_mm": 50.0,
+      "temperature": 28.0,
+      "humidity": 95,
+      "source": "simulator",
+      "timestamp": "2026-03-15T11:25:58.908550Z"
+    },
+    "validation": {
+      "valid": false,
+      "confidence": 0.8,
+      "checks": {
+        "timestamp": {
+          "passed": true,
+          "detail": "No timestamp \u2014 assumed fresh (just fetched)"
+        },
+        "source": {
+          "passed": false,
+          "detail": "Source 'simulator' is not in trusted sources"
+        },
+        "location": {
+          "passed": true,
+          "detail": "Location matches: Mumbai"
+        },
+        "plausibility": {
+          "passed": true,
+          "detail": "All values within plausible ranges"
+        }
+      }
+    },
+    "status": "verified",
+    "storage_layer": "lazai_local"
+  },
+  {
+    "dataset_id": "oracle_20260315_112558_mumbai_rainfall",
+    "event_type": "rainfall",
+    "value": 50.0,
+    "threshold": 40.0,
+    "timestamp": "2026-03-15T11:25:58.927075Z",
+    "location": "Mumbai",
+    "weather_snapshot": {
+      "city": "Mumbai",
+      "rain_mm": 50.0,
+      "temperature": 28.0,
+      "humidity": 95,
+      "source": "simulator",
+      "timestamp": "2026-03-15T11:25:58.908550Z"
+    },
+    "validation": {
+      "valid": false,
+      "confidence": 0.8,
+      "checks": {
+        "timestamp": {
+          "passed": true,
+          "detail": "No timestamp \u2014 assumed fresh (just fetched)"
+        },
+        "source": {
+          "passed": false,
+          "detail": "Source 'simulator' is not in trusted sources"
+        },
+        "location": {
+          "passed": true,
+          "detail": "Location matches: Mumbai"
+        },
+        "plausibility": {
+          "passed": true,
+          "detail": "All values within plausible ranges"
+        }
+      }
+    },
+    "status": "verified",
+    "storage_layer": "lazai_local"
+  }
+]

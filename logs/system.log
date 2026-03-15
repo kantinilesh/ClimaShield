@@ -1,0 +1,427 @@
+2026-03-15 16:07:58,965 | INFO     | climashield.system             | ClimaShield v0.3.0 starting up
+2026-03-15 16:09:03,271 | INFO     | climashield.simulator          | [SIM] Simulating rainfall in Mumbai: {'city': 'Mumbai', 'rain_mm': 45.0, 'temperature': 28.0, 'humidity': 95, 'source': 'simulator', 'timestamp': '2026-03-15T10:39:03.271935Z'}
+2026-03-15 16:09:03,272 | INFO     | climashield.simulation         | Simulating rainfall in Mumbai
+2026-03-15 16:09:03,272 | INFO     | climashield.oracle_validator   | [VALIDATOR] Mumbai: valid=False, confidence=0.8
+2026-03-15 16:09:03,273 | INFO     | climashield.lazai              | [LAZAI] Stored event: oracle_20260315_103903_mumbai_rainfall
+2026-03-15 16:09:03,273 | INFO     | climashield.payout             | [PAYOUT] Processing payout for claim CLM-SIM-C3E081: 500.0 USDC
+2026-03-15 16:09:03,274 | INFO     | climashield.simulation_claim   | SIM claim: CS1001 → 0 USDC
+2026-03-15 16:09:03,274 | INFO     | climashield.oracle_validator   | [VALIDATOR] Mumbai: valid=False, confidence=0.8
+2026-03-15 16:09:03,274 | INFO     | climashield.lazai              | [LAZAI] Stored event: oracle_20260315_103903_mumbai_rainfall
+2026-03-15 16:09:03,274 | INFO     | climashield.payout             | [PAYOUT] Processing payout for claim CLM-SIM-144DE1: 500.0 USDC
+2026-03-15 16:09:03,274 | INFO     | climashield.simulation_claim   | SIM claim: CS1002 → 0 USDC
+2026-03-15 16:09:03,274 | INFO     | climashield.oracle_validator   | [VALIDATOR] Mumbai: valid=False, confidence=0.8
+2026-03-15 16:09:03,275 | INFO     | climashield.lazai              | [LAZAI] Stored event: oracle_20260315_103903_mumbai_rainfall
+2026-03-15 16:09:03,275 | INFO     | climashield.payout             | [PAYOUT] Processing payout for claim CLM-SIM-ABAA10: 500.0 USDC
+2026-03-15 16:09:03,275 | INFO     | climashield.simulation_claim   | SIM claim: CS1006 → 0 USDC
+2026-03-15 16:09:29,041 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestCity&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 16:09:29,045 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestCity: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 16:09:29,046 | INFO     | climashield.risk_agent         | [RISK] TestCity/rainfall: score=0.29, level=low
+2026-03-15 16:09:29,050 | INFO     | climashield.policy_create      | Policy CS1008 created for TestCity
+2026-03-15 16:09:29,225 | WARNING  | climashield.x402               | [x402] API call failed: [Errno 8] nodename nor servname provided, or not known. Using simulation.
+2026-03-15 16:09:29,248 | WARNING  | climashield.x402               | [x402] Verify failed: [Errno 8] nodename nor servname provided, or not known. Simulating.
+2026-03-15 16:09:29,249 | INFO     | climashield.treasury           | [TREASURY] Deposit: +42.0 USDC from CS1008 (total: 42.0)
+2026-03-15 16:09:29,249 | INFO     | climashield.premium_payment    | Premium collected: 42.0 USDC for CS1008
+2026-03-15 16:09:29,290 | INFO     | climashield.simulator          | [SIM] Simulating rainfall in TestCity: {'city': 'TestCity', 'rain_mm': 50.0, 'temperature': 28.0, 'humidity': 95, 'source': 'simulator', 'timestamp': '2026-03-15T10:39:29.290123Z'}
+2026-03-15 16:09:29,290 | INFO     | climashield.simulation         | Simulating rainfall in TestCity
+2026-03-15 16:09:29,290 | INFO     | climashield.oracle_validator   | [VALIDATOR] TestCity: valid=False, confidence=0.8
+2026-03-15 16:09:29,293 | INFO     | climashield.lazai              | [LAZAI] Stored event: oracle_20260315_103929_testcity_rainfall
+2026-03-15 16:09:29,294 | INFO     | climashield.payout             | [PAYOUT] Processing payout for claim CLM-SIM-BBF6BD: 10.0 USDC
+2026-03-15 16:09:29,294 | INFO     | climashield.treasury           | [TREASURY] Reserved 10.0 USDC for claim CLM-SIM-BBF6BD
+2026-03-15 16:09:29,294 | INFO     | climashield.goat_wallet        | [GOAT] Transaction sent: 0xf0ec058788322c5f... → 0x00000000... for 10.0 USDC
+2026-03-15 16:09:29,294 | INFO     | climashield.lazai              | [LAZAI] Stored event: oracle_20260315_103929_testcity_claim_payout
+2026-03-15 16:09:29,294 | INFO     | climashield.treasury           | [TREASURY] Payout: -10.0 USDC for CLM-SIM-BBF6BD → unspecified... (remaining: 32.0)
+2026-03-15 16:09:29,294 | INFO     | climashield.payout             | [PAYOUT] Claim CLM-SIM-BBF6BD paid: 10.0 USDC → tx=0xf0ec058788322c5f...
+2026-03-15 16:09:29,295 | INFO     | climashield.simulation_claim   | SIM claim: CS1008 → 10.0 USDC
+2026-03-15 16:09:29,338 | INFO     | climashield.oracle_worker      | [WORKER] Starting oracle monitoring cycle…
+2026-03-15 16:09:29,339 | INFO     | climashield.oracle_worker      | Monitoring cycle started
+2026-03-15 16:09:29,463 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:09:29,463 | INFO     | climashield.weather            | [LIVE] Fetched real weather for mumbai: {'city': 'mumbai', 'rain_mm': 0.0, 'temperature': 28.07, 'humidity': 62, 'source': 'openweathermap'}
+2026-03-15 16:09:29,463 | INFO     | climashield.oracle_monitor     | [ORACLE] mumbai: alert_level=normal, exceeded=0
+2026-03-15 16:09:29,463 | INFO     | climashield.oracle_worker      | [WORKER] mumbai: all conditions normal
+2026-03-15 16:09:29,661 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Jaipur&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:09:29,662 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Jaipur: {'city': 'Jaipur', 'rain_mm': 0.0, 'temperature': 33.55, 'humidity': 10, 'source': 'openweathermap'}
+2026-03-15 16:09:29,662 | INFO     | climashield.oracle_monitor     | [ORACLE] Jaipur: alert_level=normal, exceeded=0
+2026-03-15 16:09:29,662 | INFO     | climashield.oracle_worker      | [WORKER] Jaipur: all conditions normal
+2026-03-15 16:09:29,850 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Chennai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:09:29,851 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Chennai: {'city': 'Chennai', 'rain_mm': 0.0, 'temperature': 28.62, 'humidity': 61, 'source': 'openweathermap'}
+2026-03-15 16:09:29,851 | INFO     | climashield.oracle_monitor     | [ORACLE] Chennai: alert_level=normal, exceeded=0
+2026-03-15 16:09:29,852 | INFO     | climashield.oracle_worker      | [WORKER] Chennai: all conditions normal
+2026-03-15 16:09:29,992 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Bokaro&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:09:29,993 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Bokaro: {'city': 'Bokaro', 'rain_mm': 0.0, 'temperature': 37.05, 'humidity': 11, 'source': 'openweathermap'}
+2026-03-15 16:09:29,993 | INFO     | climashield.oracle_monitor     | [ORACLE] Bokaro: alert_level=normal, exceeded=0
+2026-03-15 16:09:29,993 | INFO     | climashield.oracle_worker      | [WORKER] Bokaro: all conditions normal
+2026-03-15 16:09:30,175 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:09:30,175 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Mumbai: {'city': 'Mumbai', 'rain_mm': 0.0, 'temperature': 28.07, 'humidity': 62, 'source': 'openweathermap'}
+2026-03-15 16:09:30,176 | INFO     | climashield.oracle_monitor     | [ORACLE] Mumbai: alert_level=normal, exceeded=0
+2026-03-15 16:09:30,176 | INFO     | climashield.oracle_worker      | [WORKER] Mumbai: all conditions normal
+2026-03-15 16:09:30,385 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestCity&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 16:09:30,386 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestCity: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 16:09:30,386 | INFO     | climashield.oracle_monitor     | [ORACLE] TestCity: alert_level=normal, exceeded=0
+2026-03-15 16:09:30,387 | INFO     | climashield.oracle_worker      | [WORKER] TestCity: all conditions normal
+2026-03-15 16:09:30,387 | INFO     | climashield.oracle_worker      | Cycle complete: 6 cities, 0 triggers
+2026-03-15 16:09:30,387 | INFO     | climashield.oracle_worker      | [WORKER] Cycle complete: 6 cities, 8 policies, 0 triggers
+2026-03-15 16:18:02,429 | INFO     | climashield.system             | ClimaShield shutting down
+2026-03-15 16:18:03,025 | INFO     | climashield.system             | ClimaShield v0.3.0 starting up
+2026-03-15 16:18:03,331 | INFO     | climashield.system             | ClimaShield shutting down
+2026-03-15 16:19:57,749 | INFO     | climashield.system             | ClimaShield v0.3.0 starting up
+2026-03-15 16:19:57,788 | INFO     | apscheduler.scheduler          | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-15 16:19:57,789 | INFO     | apscheduler.scheduler          | Added job "Oracle Weather Monitoring" to job store "default"
+2026-03-15 16:19:57,789 | INFO     | apscheduler.scheduler          | Scheduler started
+2026-03-15 16:19:57,789 | INFO     | climashield.scheduler          | [SCHEDULER] Background scheduler started (oracle monitoring every 5 min)
+2026-03-15 16:23:59,431 | INFO     | climashield.scheduler          | [SCHEDULER] Scheduler stopped
+2026-03-15 16:23:59,438 | INFO     | climashield.system             | ClimaShield shutting down
+2026-03-15 16:23:59,439 | INFO     | apscheduler.scheduler          | Scheduler has been shut down
+2026-03-15 16:24:07,287 | INFO     | climashield.system             | ClimaShield v0.3.0 starting up
+2026-03-15 16:24:07,324 | INFO     | apscheduler.scheduler          | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-15 16:24:07,325 | INFO     | apscheduler.scheduler          | Added job "Oracle Weather Monitoring" to job store "default"
+2026-03-15 16:24:07,325 | INFO     | apscheduler.scheduler          | Scheduler started
+2026-03-15 16:24:07,325 | INFO     | climashield.scheduler          | [SCHEDULER] Background scheduler started (oracle monitoring every 5 min)
+2026-03-15 16:26:07,354 | INFO     | climashield.scheduler          | [SCHEDULER] Scheduler stopped
+2026-03-15 16:26:07,359 | INFO     | climashield.system             | ClimaShield shutting down
+2026-03-15 16:26:07,359 | INFO     | apscheduler.scheduler          | Scheduler has been shut down
+2026-03-15 16:26:08,202 | INFO     | climashield.system             | ClimaShield v0.3.0 starting up
+2026-03-15 16:26:08,245 | INFO     | apscheduler.scheduler          | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-15 16:26:08,245 | INFO     | apscheduler.scheduler          | Added job "Oracle Weather Monitoring" to job store "default"
+2026-03-15 16:26:08,245 | INFO     | apscheduler.scheduler          | Scheduler started
+2026-03-15 16:26:08,245 | INFO     | climashield.scheduler          | [SCHEDULER] Background scheduler started (oracle monitoring every 5 min)
+2026-03-15 16:26:30,477 | WARNING  | climashield.x402               | [x402] API call failed: [Errno 8] nodename nor servname provided, or not known. Using simulation.
+2026-03-15 16:26:30,494 | WARNING  | climashield.x402               | [x402] Verify failed: [Errno 8] nodename nor servname provided, or not known. Simulating.
+2026-03-15 16:26:30,495 | INFO     | climashield.treasury           | [TREASURY] Deposit: +42.0 USDC from CS1008 (total: 84.0)
+2026-03-15 16:26:30,496 | INFO     | climashield.premium_payment    | Premium collected: 42.0 USDC for CS1008
+2026-03-15 16:26:44,631 | INFO     | climashield.simulator          | [SIM] Simulating rainfall in TestCity: {'city': 'TestCity', 'rain_mm': 50.0, 'temperature': 28.0, 'humidity': 95, 'source': 'simulator', 'timestamp': '2026-03-15T10:56:44.631859Z'}
+2026-03-15 16:26:44,632 | INFO     | climashield.simulation         | Simulating rainfall in TestCity
+2026-03-15 16:26:44,633 | INFO     | climashield.oracle_validator   | [VALIDATOR] TestCity: valid=False, confidence=0.8
+2026-03-15 16:26:44,634 | INFO     | climashield.lazai              | [LAZAI] Stored event: oracle_20260315_105644_testcity_rainfall
+2026-03-15 16:26:44,634 | INFO     | climashield.payout             | [PAYOUT] Processing payout for claim CLM-SIM-D701A8: 10.0 USDC
+2026-03-15 16:26:44,634 | INFO     | climashield.treasury           | [TREASURY] Reserved 10.0 USDC for claim CLM-SIM-D701A8
+2026-03-15 16:26:45,975 | INFO     | climashield.goat_wallet        | [GOAT] ✅ REAL TX sent: ff9e3679a628c78eb5d8b90af7cc3cf18bc940f4db9a55988594bf6d73244458
+2026-03-15 16:26:48,858 | INFO     | climashield.lazai              | [LAZAI] Stored event: oracle_20260315_105648_testcity_claim_payout
+2026-03-15 16:26:48,859 | INFO     | climashield.treasury           | [TREASURY] Payout: -10.0 USDC for CLM-SIM-D701A8 → unspecified... (remaining: 64.0)
+2026-03-15 16:26:48,860 | INFO     | climashield.payout             | [PAYOUT] Claim CLM-SIM-D701A8 paid: 10.0 USDC → tx=0xff9e3679a628c78e...
+2026-03-15 16:26:48,860 | INFO     | climashield.simulation_claim   | SIM claim: CS1008 → 10.0 USDC
+2026-03-15 16:29:13,059 | INFO     | climashield.scheduler          | [SCHEDULER] Scheduler stopped
+2026-03-15 16:29:13,069 | INFO     | climashield.system             | ClimaShield shutting down
+2026-03-15 16:29:13,070 | INFO     | apscheduler.scheduler          | Scheduler has been shut down
+2026-03-15 16:36:19,806 | INFO     | climashield.system             | ClimaShield v0.3.0 starting up – DB initialized
+2026-03-15 16:36:19,843 | INFO     | apscheduler.scheduler          | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-15 16:36:19,843 | INFO     | apscheduler.scheduler          | Added job "Oracle Weather Monitoring" to job store "default"
+2026-03-15 16:36:19,843 | INFO     | apscheduler.scheduler          | Scheduler started
+2026-03-15 16:36:19,843 | INFO     | climashield.scheduler          | [SCHEDULER] Background scheduler started (oracle monitoring every 5 min)
+2026-03-15 16:37:02,368 | INFO     | climashield.scheduler          | [SCHEDULER] Scheduler stopped
+2026-03-15 16:37:02,399 | INFO     | climashield.system             | ClimaShield shutting down
+2026-03-15 16:37:02,400 | INFO     | apscheduler.scheduler          | Scheduler has been shut down
+2026-03-15 16:37:03,478 | INFO     | climashield.system             | ClimaShield v0.3.0 starting up – DB initialized
+2026-03-15 16:37:03,514 | INFO     | apscheduler.scheduler          | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-15 16:37:03,514 | INFO     | apscheduler.scheduler          | Added job "Oracle Weather Monitoring" to job store "default"
+2026-03-15 16:37:03,514 | INFO     | apscheduler.scheduler          | Scheduler started
+2026-03-15 16:37:03,514 | INFO     | climashield.scheduler          | [SCHEDULER] Background scheduler started (oracle monitoring every 5 min)
+2026-03-15 16:42:03,521 | INFO     | apscheduler.executors.default  | Running job "Oracle Weather Monitoring (trigger: interval[0:05:00], next run at: 2026-03-15 16:47:03 IST)" (scheduled at 2026-03-15 16:42:03.514063+05:30)
+2026-03-15 16:42:03,527 | INFO     | climashield.oracle_worker      | [WORKER] Starting oracle monitoring cycle…
+2026-03-15 16:42:03,536 | INFO     | climashield.oracle_worker      | Monitoring cycle started
+2026-03-15 16:42:03,942 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:42:03,943 | INFO     | climashield.weather            | [LIVE] Fetched real weather for mumbai: {'city': 'mumbai', 'rain_mm': 0.0, 'temperature': 28.07, 'humidity': 62, 'source': 'openweathermap'}
+2026-03-15 16:42:03,944 | INFO     | climashield.oracle_monitor     | [ORACLE] mumbai: alert_level=normal, exceeded=0
+2026-03-15 16:42:03,944 | INFO     | climashield.oracle_worker      | [WORKER] mumbai: all conditions normal
+2026-03-15 16:42:04,140 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Jaipur&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:42:04,140 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Jaipur: {'city': 'Jaipur', 'rain_mm': 0.0, 'temperature': 33.18, 'humidity': 9, 'source': 'openweathermap'}
+2026-03-15 16:42:04,140 | INFO     | climashield.oracle_monitor     | [ORACLE] Jaipur: alert_level=normal, exceeded=0
+2026-03-15 16:42:04,140 | INFO     | climashield.oracle_worker      | [WORKER] Jaipur: all conditions normal
+2026-03-15 16:42:04,323 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Chennai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:42:04,324 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Chennai: {'city': 'Chennai', 'rain_mm': 0.0, 'temperature': 28.62, 'humidity': 61, 'source': 'openweathermap'}
+2026-03-15 16:42:04,324 | INFO     | climashield.oracle_monitor     | [ORACLE] Chennai: alert_level=normal, exceeded=0
+2026-03-15 16:42:04,324 | INFO     | climashield.oracle_worker      | [WORKER] Chennai: all conditions normal
+2026-03-15 16:42:04,611 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Bokaro&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:42:04,612 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Bokaro: {'city': 'Bokaro', 'rain_mm': 0.0, 'temperature': 37.05, 'humidity': 11, 'source': 'openweathermap'}
+2026-03-15 16:42:04,612 | INFO     | climashield.oracle_monitor     | [ORACLE] Bokaro: alert_level=normal, exceeded=0
+2026-03-15 16:42:04,612 | INFO     | climashield.oracle_worker      | [WORKER] Bokaro: all conditions normal
+2026-03-15 16:42:04,787 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:42:04,787 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Mumbai: {'city': 'Mumbai', 'rain_mm': 0.0, 'temperature': 28.07, 'humidity': 62, 'source': 'openweathermap'}
+2026-03-15 16:42:04,788 | INFO     | climashield.oracle_monitor     | [ORACLE] Mumbai: alert_level=normal, exceeded=0
+2026-03-15 16:42:04,788 | INFO     | climashield.oracle_worker      | [WORKER] Mumbai: all conditions normal
+2026-03-15 16:42:05,230 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestCity&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 16:42:05,233 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestCity: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 16:42:05,236 | INFO     | climashield.oracle_monitor     | [ORACLE] TestCity: alert_level=normal, exceeded=0
+2026-03-15 16:42:05,247 | INFO     | climashield.oracle_worker      | [WORKER] TestCity: all conditions normal
+2026-03-15 16:42:05,255 | INFO     | climashield.oracle_worker      | Cycle complete: 6 cities, 0 triggers
+2026-03-15 16:42:05,256 | INFO     | climashield.oracle_worker      | [WORKER] Cycle complete: 6 cities, 8 policies, 0 triggers
+2026-03-15 16:42:05,256 | INFO     | climashield.scheduler          | [SCHEDULER] Oracle check complete: 0 triggers
+2026-03-15 16:42:05,256 | INFO     | apscheduler.executors.default  | Job "Oracle Weather Monitoring (trigger: interval[0:05:00], next run at: 2026-03-15 16:47:03 IST)" executed successfully
+2026-03-15 16:42:27,552 | INFO     | climashield.scheduler          | [SCHEDULER] Scheduler stopped
+2026-03-15 16:42:27,600 | INFO     | climashield.system             | ClimaShield shutting down
+2026-03-15 16:42:27,601 | INFO     | apscheduler.scheduler          | Scheduler has been shut down
+2026-03-15 16:42:28,853 | INFO     | climashield.system             | ClimaShield v0.3.0 starting up – DB initialized
+2026-03-15 16:42:28,917 | INFO     | apscheduler.scheduler          | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-15 16:42:28,918 | INFO     | apscheduler.scheduler          | Added job "Oracle Weather Monitoring" to job store "default"
+2026-03-15 16:42:28,918 | INFO     | apscheduler.scheduler          | Scheduler started
+2026-03-15 16:42:28,918 | INFO     | climashield.scheduler          | [SCHEDULER] Background scheduler started (oracle monitoring every 5 min)
+2026-03-15 16:42:42,268 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestDeploy&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 16:42:42,269 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestDeploy: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 16:42:42,269 | INFO     | climashield.risk_agent         | [RISK] TestDeploy/rainfall: score=0.29, level=low
+2026-03-15 16:42:42,271 | INFO     | climashield.policy_create      | Policy CS1009 created for TestDeploy
+2026-03-15 16:42:42,292 | INFO     | climashield.simulator          | [SIM] Simulating rainfall in TestDeploy: {'city': 'TestDeploy', 'rain_mm': 50.0, 'temperature': 28.0, 'humidity': 95, 'source': 'simulator', 'timestamp': '2026-03-15T11:12:42.292749Z'}
+2026-03-15 16:42:42,293 | INFO     | climashield.simulation         | Simulating rainfall in TestDeploy
+2026-03-15 16:42:42,293 | INFO     | climashield.oracle_validator   | [VALIDATOR] TestDeploy: valid=False, confidence=0.8
+2026-03-15 16:42:42,294 | INFO     | climashield.lazai              | [LAZAI] Stored event: oracle_20260315_111242_testdeploy_rainfall
+2026-03-15 16:42:42,294 | INFO     | climashield.payout             | [PAYOUT] Processing payout for claim CLM-SIM-5A5C35: 10.0 USDC
+2026-03-15 16:42:42,295 | INFO     | climashield.treasury           | [TREASURY] Reserved 10.0 USDC for claim CLM-SIM-5A5C35
+2026-03-15 16:42:43,333 | INFO     | climashield.goat_wallet        | [GOAT] ✅ REAL TX sent: b2784f09687aad7623973e4add5439d897f8fddfe00bc2580628c9e625e8fa89
+2026-03-15 16:42:44,865 | INFO     | climashield.lazai              | [LAZAI] Stored event: oracle_20260315_111244_testdeploy_claim_payout
+2026-03-15 16:42:44,866 | INFO     | climashield.treasury           | [TREASURY] Payout: -10.0 USDC for CLM-SIM-5A5C35 → unspecified... (remaining: 54.0)
+2026-03-15 16:42:44,866 | INFO     | climashield.payout             | [PAYOUT] Claim CLM-SIM-5A5C35 paid: 10.0 USDC → tx=0xb2784f09687aad76...
+2026-03-15 16:42:44,867 | INFO     | climashield.simulation_claim   | SIM claim: CS1009 → 10.0 USDC
+2026-03-15 16:42:44,989 | INFO     | climashield.oracle_worker      | [WORKER] Starting oracle monitoring cycle…
+2026-03-15 16:42:44,990 | INFO     | climashield.oracle_worker      | Monitoring cycle started
+2026-03-15 16:42:45,193 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:42:45,193 | INFO     | climashield.weather            | [LIVE] Fetched real weather for mumbai: {'city': 'mumbai', 'rain_mm': 0.0, 'temperature': 28.07, 'humidity': 62, 'source': 'openweathermap'}
+2026-03-15 16:42:45,193 | INFO     | climashield.oracle_monitor     | [ORACLE] mumbai: alert_level=normal, exceeded=0
+2026-03-15 16:42:45,193 | INFO     | climashield.oracle_worker      | [WORKER] mumbai: all conditions normal
+2026-03-15 16:42:45,511 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Jaipur&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:42:45,511 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Jaipur: {'city': 'Jaipur', 'rain_mm': 0.0, 'temperature': 33.18, 'humidity': 9, 'source': 'openweathermap'}
+2026-03-15 16:42:45,511 | INFO     | climashield.oracle_monitor     | [ORACLE] Jaipur: alert_level=normal, exceeded=0
+2026-03-15 16:42:45,511 | INFO     | climashield.oracle_worker      | [WORKER] Jaipur: all conditions normal
+2026-03-15 16:42:45,737 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Chennai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:42:45,738 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Chennai: {'city': 'Chennai', 'rain_mm': 0.0, 'temperature': 28.62, 'humidity': 61, 'source': 'openweathermap'}
+2026-03-15 16:42:45,738 | INFO     | climashield.oracle_monitor     | [ORACLE] Chennai: alert_level=normal, exceeded=0
+2026-03-15 16:42:45,738 | INFO     | climashield.oracle_worker      | [WORKER] Chennai: all conditions normal
+2026-03-15 16:42:46,026 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Bokaro&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:42:46,027 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Bokaro: {'city': 'Bokaro', 'rain_mm': 0.0, 'temperature': 37.05, 'humidity': 11, 'source': 'openweathermap'}
+2026-03-15 16:42:46,027 | INFO     | climashield.oracle_monitor     | [ORACLE] Bokaro: alert_level=normal, exceeded=0
+2026-03-15 16:42:46,027 | INFO     | climashield.oracle_worker      | [WORKER] Bokaro: all conditions normal
+2026-03-15 16:42:46,186 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:42:46,186 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Mumbai: {'city': 'Mumbai', 'rain_mm': 0.0, 'temperature': 28.07, 'humidity': 62, 'source': 'openweathermap'}
+2026-03-15 16:42:46,187 | INFO     | climashield.oracle_monitor     | [ORACLE] Mumbai: alert_level=normal, exceeded=0
+2026-03-15 16:42:46,187 | INFO     | climashield.oracle_worker      | [WORKER] Mumbai: all conditions normal
+2026-03-15 16:42:46,410 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestCity&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 16:42:46,412 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestCity: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 16:42:46,412 | INFO     | climashield.oracle_monitor     | [ORACLE] TestCity: alert_level=normal, exceeded=0
+2026-03-15 16:42:46,412 | INFO     | climashield.oracle_worker      | [WORKER] TestCity: all conditions normal
+2026-03-15 16:42:46,597 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestDeploy&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 16:42:46,597 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestDeploy: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 16:42:46,597 | INFO     | climashield.oracle_monitor     | [ORACLE] TestDeploy: alert_level=normal, exceeded=0
+2026-03-15 16:42:46,597 | INFO     | climashield.oracle_worker      | [WORKER] TestDeploy: all conditions normal
+2026-03-15 16:42:46,599 | INFO     | climashield.oracle_worker      | Cycle complete: 7 cities, 0 triggers
+2026-03-15 16:42:46,600 | INFO     | climashield.oracle_worker      | [WORKER] Cycle complete: 7 cities, 9 policies, 0 triggers
+2026-03-15 16:47:28,933 | INFO     | apscheduler.executors.default  | Running job "Oracle Weather Monitoring (trigger: interval[0:05:00], next run at: 2026-03-15 16:52:28 IST)" (scheduled at 2026-03-15 16:47:28.917376+05:30)
+2026-03-15 16:47:28,936 | INFO     | climashield.oracle_worker      | [WORKER] Starting oracle monitoring cycle…
+2026-03-15 16:47:28,943 | INFO     | climashield.oracle_worker      | Monitoring cycle started
+2026-03-15 16:47:29,149 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:47:29,151 | INFO     | climashield.weather            | [LIVE] Fetched real weather for mumbai: {'city': 'mumbai', 'rain_mm': 0.0, 'temperature': 28.07, 'humidity': 62, 'source': 'openweathermap'}
+2026-03-15 16:47:29,152 | INFO     | climashield.oracle_monitor     | [ORACLE] mumbai: alert_level=normal, exceeded=0
+2026-03-15 16:47:29,152 | INFO     | climashield.oracle_worker      | [WORKER] mumbai: all conditions normal
+2026-03-15 16:47:29,508 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Jaipur&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:47:29,509 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Jaipur: {'city': 'Jaipur', 'rain_mm': 0.0, 'temperature': 33.18, 'humidity': 9, 'source': 'openweathermap'}
+2026-03-15 16:47:29,509 | INFO     | climashield.oracle_monitor     | [ORACLE] Jaipur: alert_level=normal, exceeded=0
+2026-03-15 16:47:29,509 | INFO     | climashield.oracle_worker      | [WORKER] Jaipur: all conditions normal
+2026-03-15 16:47:29,681 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Chennai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:47:29,681 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Chennai: {'city': 'Chennai', 'rain_mm': 0.0, 'temperature': 28.62, 'humidity': 61, 'source': 'openweathermap'}
+2026-03-15 16:47:29,681 | INFO     | climashield.oracle_monitor     | [ORACLE] Chennai: alert_level=normal, exceeded=0
+2026-03-15 16:47:29,681 | INFO     | climashield.oracle_worker      | [WORKER] Chennai: all conditions normal
+2026-03-15 16:47:29,915 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Bokaro&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:47:29,916 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Bokaro: {'city': 'Bokaro', 'rain_mm': 0.0, 'temperature': 37.05, 'humidity': 11, 'source': 'openweathermap'}
+2026-03-15 16:47:29,916 | INFO     | climashield.oracle_monitor     | [ORACLE] Bokaro: alert_level=normal, exceeded=0
+2026-03-15 16:47:29,916 | INFO     | climashield.oracle_worker      | [WORKER] Bokaro: all conditions normal
+2026-03-15 16:47:30,069 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:47:30,069 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Mumbai: {'city': 'Mumbai', 'rain_mm': 0.0, 'temperature': 28.07, 'humidity': 62, 'source': 'openweathermap'}
+2026-03-15 16:47:30,069 | INFO     | climashield.oracle_monitor     | [ORACLE] Mumbai: alert_level=normal, exceeded=0
+2026-03-15 16:47:30,069 | INFO     | climashield.oracle_worker      | [WORKER] Mumbai: all conditions normal
+2026-03-15 16:47:30,286 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestCity&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 16:47:30,288 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestCity: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 16:47:30,288 | INFO     | climashield.oracle_monitor     | [ORACLE] TestCity: alert_level=normal, exceeded=0
+2026-03-15 16:47:30,288 | INFO     | climashield.oracle_worker      | [WORKER] TestCity: all conditions normal
+2026-03-15 16:47:30,779 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestDeploy&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 16:47:30,780 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestDeploy: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 16:47:30,780 | INFO     | climashield.oracle_monitor     | [ORACLE] TestDeploy: alert_level=normal, exceeded=0
+2026-03-15 16:47:30,780 | INFO     | climashield.oracle_worker      | [WORKER] TestDeploy: all conditions normal
+2026-03-15 16:47:30,782 | INFO     | climashield.oracle_worker      | Cycle complete: 7 cities, 0 triggers
+2026-03-15 16:47:30,782 | INFO     | climashield.oracle_worker      | [WORKER] Cycle complete: 7 cities, 9 policies, 0 triggers
+2026-03-15 16:47:30,782 | INFO     | climashield.scheduler          | [SCHEDULER] Oracle check complete: 0 triggers
+2026-03-15 16:47:30,782 | INFO     | apscheduler.executors.default  | Job "Oracle Weather Monitoring (trigger: interval[0:05:00], next run at: 2026-03-15 16:52:28 IST)" executed successfully
+2026-03-15 16:52:29,009 | INFO     | apscheduler.executors.default  | Running job "Oracle Weather Monitoring (trigger: interval[0:05:00], next run at: 2026-03-15 16:57:28 IST)" (scheduled at 2026-03-15 16:52:28.917376+05:30)
+2026-03-15 16:52:29,021 | INFO     | climashield.oracle_worker      | [WORKER] Starting oracle monitoring cycle…
+2026-03-15 16:52:29,031 | INFO     | climashield.oracle_worker      | Monitoring cycle started
+2026-03-15 16:52:29,257 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:52:29,259 | INFO     | climashield.weather            | [LIVE] Fetched real weather for mumbai: {'city': 'mumbai', 'rain_mm': 0.0, 'temperature': 28.07, 'humidity': 62, 'source': 'openweathermap'}
+2026-03-15 16:52:29,259 | INFO     | climashield.oracle_monitor     | [ORACLE] mumbai: alert_level=normal, exceeded=0
+2026-03-15 16:52:29,259 | INFO     | climashield.oracle_worker      | [WORKER] mumbai: all conditions normal
+2026-03-15 16:52:29,442 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Jaipur&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:52:29,443 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Jaipur: {'city': 'Jaipur', 'rain_mm': 0.0, 'temperature': 33.18, 'humidity': 9, 'source': 'openweathermap'}
+2026-03-15 16:52:29,443 | INFO     | climashield.oracle_monitor     | [ORACLE] Jaipur: alert_level=normal, exceeded=0
+2026-03-15 16:52:29,443 | INFO     | climashield.oracle_worker      | [WORKER] Jaipur: all conditions normal
+2026-03-15 16:52:29,603 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Chennai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:52:29,603 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Chennai: {'city': 'Chennai', 'rain_mm': 0.0, 'temperature': 28.62, 'humidity': 61, 'source': 'openweathermap'}
+2026-03-15 16:52:29,604 | INFO     | climashield.oracle_monitor     | [ORACLE] Chennai: alert_level=normal, exceeded=0
+2026-03-15 16:52:29,604 | INFO     | climashield.oracle_worker      | [WORKER] Chennai: all conditions normal
+2026-03-15 16:52:29,727 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Bokaro&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:52:29,728 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Bokaro: {'city': 'Bokaro', 'rain_mm': 0.0, 'temperature': 37.05, 'humidity': 11, 'source': 'openweathermap'}
+2026-03-15 16:52:29,728 | INFO     | climashield.oracle_monitor     | [ORACLE] Bokaro: alert_level=normal, exceeded=0
+2026-03-15 16:52:29,728 | INFO     | climashield.oracle_worker      | [WORKER] Bokaro: all conditions normal
+2026-03-15 16:52:29,980 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:52:29,981 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Mumbai: {'city': 'Mumbai', 'rain_mm': 0.0, 'temperature': 28.07, 'humidity': 62, 'source': 'openweathermap'}
+2026-03-15 16:52:29,982 | INFO     | climashield.oracle_monitor     | [ORACLE] Mumbai: alert_level=normal, exceeded=0
+2026-03-15 16:52:29,982 | INFO     | climashield.oracle_worker      | [WORKER] Mumbai: all conditions normal
+2026-03-15 16:52:30,128 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestCity&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 16:52:30,128 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestCity: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 16:52:30,129 | INFO     | climashield.oracle_monitor     | [ORACLE] TestCity: alert_level=normal, exceeded=0
+2026-03-15 16:52:30,129 | INFO     | climashield.oracle_worker      | [WORKER] TestCity: all conditions normal
+2026-03-15 16:52:30,277 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestDeploy&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 16:52:30,277 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestDeploy: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 16:52:30,277 | INFO     | climashield.oracle_monitor     | [ORACLE] TestDeploy: alert_level=normal, exceeded=0
+2026-03-15 16:52:30,277 | INFO     | climashield.oracle_worker      | [WORKER] TestDeploy: all conditions normal
+2026-03-15 16:52:30,464 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Noida&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:52:30,466 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Noida: {'city': 'Noida', 'rain_mm': 0.0, 'temperature': 32.8, 'humidity': 17, 'source': 'openweathermap'}
+2026-03-15 16:52:30,467 | INFO     | climashield.oracle_monitor     | [ORACLE] Noida: alert_level=normal, exceeded=0
+2026-03-15 16:52:30,467 | INFO     | climashield.oracle_worker      | [WORKER] Noida: all conditions normal
+2026-03-15 16:52:30,469 | INFO     | climashield.oracle_worker      | Cycle complete: 8 cities, 0 triggers
+2026-03-15 16:52:30,470 | INFO     | climashield.oracle_worker      | [WORKER] Cycle complete: 8 cities, 10 policies, 0 triggers
+2026-03-15 16:52:30,470 | INFO     | climashield.scheduler          | [SCHEDULER] Oracle check complete: 0 triggers
+2026-03-15 16:52:30,471 | INFO     | apscheduler.executors.default  | Job "Oracle Weather Monitoring (trigger: interval[0:05:00], next run at: 2026-03-15 16:57:28 IST)" executed successfully
+2026-03-15 16:55:58,908 | INFO     | climashield.simulator          | [SIM] Simulating rainfall in Mumbai: {'city': 'Mumbai', 'rain_mm': 50.0, 'temperature': 28.0, 'humidity': 95, 'source': 'simulator', 'timestamp': '2026-03-15T11:25:58.908550Z'}
+2026-03-15 16:55:58,911 | INFO     | climashield.simulation         | Simulating rainfall in Mumbai
+2026-03-15 16:55:58,916 | INFO     | climashield.oracle_validator   | [VALIDATOR] Mumbai: valid=False, confidence=0.8
+2026-03-15 16:55:58,919 | INFO     | climashield.lazai              | [LAZAI] Stored event: oracle_20260315_112558_mumbai_rainfall
+2026-03-15 16:55:58,924 | INFO     | climashield.payout             | [PAYOUT] Processing payout for claim CLM-SIM-AB66F7: 500.0 USDC
+2026-03-15 16:55:58,925 | INFO     | climashield.simulation_claim   | SIM claim: CS1001 → 0 USDC
+2026-03-15 16:55:58,925 | INFO     | climashield.oracle_validator   | [VALIDATOR] Mumbai: valid=False, confidence=0.8
+2026-03-15 16:55:58,926 | INFO     | climashield.lazai              | [LAZAI] Stored event: oracle_20260315_112558_mumbai_rainfall
+2026-03-15 16:55:58,926 | INFO     | climashield.payout             | [PAYOUT] Processing payout for claim CLM-SIM-D70B31: 500.0 USDC
+2026-03-15 16:55:58,927 | INFO     | climashield.simulation_claim   | SIM claim: CS1002 → 0 USDC
+2026-03-15 16:55:58,927 | INFO     | climashield.oracle_validator   | [VALIDATOR] Mumbai: valid=False, confidence=0.8
+2026-03-15 16:55:58,927 | INFO     | climashield.lazai              | [LAZAI] Stored event: oracle_20260315_112558_mumbai_rainfall
+2026-03-15 16:55:58,927 | INFO     | climashield.payout             | [PAYOUT] Processing payout for claim CLM-SIM-FB705A: 500.0 USDC
+2026-03-15 16:55:58,928 | INFO     | climashield.simulation_claim   | SIM claim: CS1006 → 0 USDC
+2026-03-15 16:57:28,927 | INFO     | apscheduler.executors.default  | Running job "Oracle Weather Monitoring (trigger: interval[0:05:00], next run at: 2026-03-15 17:02:28 IST)" (scheduled at 2026-03-15 16:57:28.917376+05:30)
+2026-03-15 16:57:28,929 | INFO     | climashield.oracle_worker      | [WORKER] Starting oracle monitoring cycle…
+2026-03-15 16:57:28,932 | INFO     | climashield.oracle_worker      | Monitoring cycle started
+2026-03-15 16:57:29,317 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:57:29,318 | INFO     | climashield.weather            | [LIVE] Fetched real weather for mumbai: {'city': 'mumbai', 'rain_mm': 0.0, 'temperature': 28.07, 'humidity': 62, 'source': 'openweathermap'}
+2026-03-15 16:57:29,318 | INFO     | climashield.oracle_monitor     | [ORACLE] mumbai: alert_level=normal, exceeded=0
+2026-03-15 16:57:29,318 | INFO     | climashield.oracle_worker      | [WORKER] mumbai: all conditions normal
+2026-03-15 16:57:29,444 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Jaipur&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:57:29,445 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Jaipur: {'city': 'Jaipur', 'rain_mm': 0.0, 'temperature': 33.18, 'humidity': 9, 'source': 'openweathermap'}
+2026-03-15 16:57:29,445 | INFO     | climashield.oracle_monitor     | [ORACLE] Jaipur: alert_level=normal, exceeded=0
+2026-03-15 16:57:29,445 | INFO     | climashield.oracle_worker      | [WORKER] Jaipur: all conditions normal
+2026-03-15 16:57:29,563 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Chennai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:57:29,563 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Chennai: {'city': 'Chennai', 'rain_mm': 0.0, 'temperature': 28.62, 'humidity': 61, 'source': 'openweathermap'}
+2026-03-15 16:57:29,563 | INFO     | climashield.oracle_monitor     | [ORACLE] Chennai: alert_level=normal, exceeded=0
+2026-03-15 16:57:29,563 | INFO     | climashield.oracle_worker      | [WORKER] Chennai: all conditions normal
+2026-03-15 16:57:29,681 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Bokaro&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:57:29,682 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Bokaro: {'city': 'Bokaro', 'rain_mm': 0.0, 'temperature': 37.05, 'humidity': 11, 'source': 'openweathermap'}
+2026-03-15 16:57:29,682 | INFO     | climashield.oracle_monitor     | [ORACLE] Bokaro: alert_level=normal, exceeded=0
+2026-03-15 16:57:29,682 | INFO     | climashield.oracle_worker      | [WORKER] Bokaro: all conditions normal
+2026-03-15 16:57:29,872 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:57:29,873 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Mumbai: {'city': 'Mumbai', 'rain_mm': 0.0, 'temperature': 28.07, 'humidity': 62, 'source': 'openweathermap'}
+2026-03-15 16:57:29,873 | INFO     | climashield.oracle_monitor     | [ORACLE] Mumbai: alert_level=normal, exceeded=0
+2026-03-15 16:57:29,873 | INFO     | climashield.oracle_worker      | [WORKER] Mumbai: all conditions normal
+2026-03-15 16:57:30,000 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestCity&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 16:57:30,001 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestCity: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 16:57:30,002 | INFO     | climashield.oracle_monitor     | [ORACLE] TestCity: alert_level=normal, exceeded=0
+2026-03-15 16:57:30,002 | INFO     | climashield.oracle_worker      | [WORKER] TestCity: all conditions normal
+2026-03-15 16:57:30,122 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestDeploy&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 16:57:30,123 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestDeploy: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 16:57:30,123 | INFO     | climashield.oracle_monitor     | [ORACLE] TestDeploy: alert_level=normal, exceeded=0
+2026-03-15 16:57:30,123 | INFO     | climashield.oracle_worker      | [WORKER] TestDeploy: all conditions normal
+2026-03-15 16:57:30,243 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Noida&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 16:57:30,243 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Noida: {'city': 'Noida', 'rain_mm': 0.0, 'temperature': 32.8, 'humidity': 17, 'source': 'openweathermap'}
+2026-03-15 16:57:30,243 | INFO     | climashield.oracle_monitor     | [ORACLE] Noida: alert_level=normal, exceeded=0
+2026-03-15 16:57:30,243 | INFO     | climashield.oracle_worker      | [WORKER] Noida: all conditions normal
+2026-03-15 16:57:30,244 | INFO     | climashield.oracle_worker      | Cycle complete: 8 cities, 0 triggers
+2026-03-15 16:57:30,244 | INFO     | climashield.oracle_worker      | [WORKER] Cycle complete: 8 cities, 10 policies, 0 triggers
+2026-03-15 16:57:30,244 | INFO     | climashield.scheduler          | [SCHEDULER] Oracle check complete: 0 triggers
+2026-03-15 16:57:30,244 | INFO     | apscheduler.executors.default  | Job "Oracle Weather Monitoring (trigger: interval[0:05:00], next run at: 2026-03-15 17:02:28 IST)" executed successfully
+2026-03-15 17:01:15,426 | INFO     | climashield.scheduler          | [SCHEDULER] Scheduler stopped
+2026-03-15 17:01:15,533 | INFO     | climashield.system             | ClimaShield shutting down
+2026-03-15 17:01:15,562 | INFO     | apscheduler.scheduler          | Scheduler has been shut down
+2026-03-15 17:01:17,922 | INFO     | climashield.system             | ClimaShield v0.3.0 starting up – DB initialized
+2026-03-15 17:01:17,971 | INFO     | apscheduler.scheduler          | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-15 17:01:17,971 | INFO     | apscheduler.scheduler          | Added job "Oracle Weather Monitoring" to job store "default"
+2026-03-15 17:01:17,971 | INFO     | apscheduler.scheduler          | Scheduler started
+2026-03-15 17:01:17,971 | INFO     | climashield.scheduler          | [SCHEDULER] Background scheduler started (oracle monitoring every 5 min)
+2026-03-15 17:01:56,804 | INFO     | climashield.scheduler          | [SCHEDULER] Scheduler stopped
+2026-03-15 17:01:56,815 | INFO     | climashield.system             | ClimaShield shutting down
+2026-03-15 17:01:56,818 | INFO     | apscheduler.scheduler          | Scheduler has been shut down
+2026-03-15 17:01:58,858 | INFO     | climashield.system             | ClimaShield v0.3.0 starting up – DB initialized
+2026-03-15 17:01:58,912 | INFO     | apscheduler.scheduler          | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-15 17:01:58,912 | INFO     | apscheduler.scheduler          | Added job "Oracle Weather Monitoring" to job store "default"
+2026-03-15 17:01:58,912 | INFO     | apscheduler.scheduler          | Scheduler started
+2026-03-15 17:01:58,912 | INFO     | climashield.scheduler          | [SCHEDULER] Background scheduler started (oracle monitoring every 5 min)
+2026-03-15 17:06:58,947 | INFO     | apscheduler.executors.default  | Running job "Oracle Weather Monitoring (trigger: interval[0:05:00], next run at: 2026-03-15 17:11:58 IST)" (scheduled at 2026-03-15 17:06:58.912125+05:30)
+2026-03-15 17:06:59,000 | INFO     | climashield.oracle_worker      | [WORKER] Starting oracle monitoring cycle…
+2026-03-15 17:06:59,011 | INFO     | climashield.oracle_worker      | Monitoring cycle started
+2026-03-15 17:06:59,831 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 17:06:59,835 | INFO     | climashield.weather            | [LIVE] Fetched real weather for mumbai: {'city': 'mumbai', 'rain_mm': 0.0, 'temperature': 28.07, 'humidity': 62, 'source': 'openweathermap'}
+2026-03-15 17:06:59,835 | INFO     | climashield.oracle_monitor     | [ORACLE] mumbai: alert_level=normal, exceeded=0
+2026-03-15 17:06:59,835 | INFO     | climashield.oracle_worker      | [WORKER] mumbai: all conditions normal
+2026-03-15 17:06:59,969 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Jaipur&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 17:06:59,969 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Jaipur: {'city': 'Jaipur', 'rain_mm': 0.0, 'temperature': 32.25, 'humidity': 10, 'source': 'openweathermap'}
+2026-03-15 17:06:59,969 | INFO     | climashield.oracle_monitor     | [ORACLE] Jaipur: alert_level=normal, exceeded=0
+2026-03-15 17:06:59,969 | INFO     | climashield.oracle_worker      | [WORKER] Jaipur: all conditions normal
+2026-03-15 17:07:00,092 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Chennai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 17:07:00,092 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Chennai: {'city': 'Chennai', 'rain_mm': 0.0, 'temperature': 28.62, 'humidity': 61, 'source': 'openweathermap'}
+2026-03-15 17:07:00,093 | INFO     | climashield.oracle_monitor     | [ORACLE] Chennai: alert_level=normal, exceeded=0
+2026-03-15 17:07:00,093 | INFO     | climashield.oracle_worker      | [WORKER] Chennai: all conditions normal
+2026-03-15 17:07:00,227 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Bokaro&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 17:07:00,228 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Bokaro: {'city': 'Bokaro', 'rain_mm': 0.0, 'temperature': 34.47, 'humidity': 13, 'source': 'openweathermap'}
+2026-03-15 17:07:00,228 | INFO     | climashield.oracle_monitor     | [ORACLE] Bokaro: alert_level=normal, exceeded=0
+2026-03-15 17:07:00,228 | INFO     | climashield.oracle_worker      | [WORKER] Bokaro: all conditions normal
+2026-03-15 17:07:00,448 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 17:07:00,448 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Mumbai: {'city': 'Mumbai', 'rain_mm': 0.0, 'temperature': 28.07, 'humidity': 62, 'source': 'openweathermap'}
+2026-03-15 17:07:00,448 | INFO     | climashield.oracle_monitor     | [ORACLE] Mumbai: alert_level=normal, exceeded=0
+2026-03-15 17:07:00,448 | INFO     | climashield.oracle_worker      | [WORKER] Mumbai: all conditions normal
+2026-03-15 17:07:00,580 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestCity&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 17:07:00,581 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestCity: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 17:07:00,581 | INFO     | climashield.oracle_monitor     | [ORACLE] TestCity: alert_level=normal, exceeded=0
+2026-03-15 17:07:00,581 | INFO     | climashield.oracle_worker      | [WORKER] TestCity: all conditions normal
+2026-03-15 17:07:00,709 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestDeploy&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 17:07:00,710 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestDeploy: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 17:07:00,710 | INFO     | climashield.oracle_monitor     | [ORACLE] TestDeploy: alert_level=normal, exceeded=0
+2026-03-15 17:07:00,710 | INFO     | climashield.oracle_worker      | [WORKER] TestDeploy: all conditions normal
+2026-03-15 17:07:00,935 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Noida&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 17:07:00,936 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Noida: {'city': 'Noida', 'rain_mm': 0.0, 'temperature': 30.43, 'humidity': 22, 'source': 'openweathermap'}
+2026-03-15 17:07:00,936 | INFO     | climashield.oracle_monitor     | [ORACLE] Noida: alert_level=normal, exceeded=0
+2026-03-15 17:07:00,936 | INFO     | climashield.oracle_worker      | [WORKER] Noida: all conditions normal
+2026-03-15 17:07:00,939 | INFO     | climashield.oracle_worker      | Cycle complete: 8 cities, 0 triggers
+2026-03-15 17:07:00,939 | INFO     | climashield.oracle_worker      | [WORKER] Cycle complete: 8 cities, 10 policies, 0 triggers
+2026-03-15 17:07:00,939 | INFO     | climashield.scheduler          | [SCHEDULER] Oracle check complete: 0 triggers
+2026-03-15 17:07:00,939 | INFO     | apscheduler.executors.default  | Job "Oracle Weather Monitoring (trigger: interval[0:05:00], next run at: 2026-03-15 17:11:58 IST)" executed successfully
+2026-03-15 17:11:58,919 | INFO     | apscheduler.executors.default  | Running job "Oracle Weather Monitoring (trigger: interval[0:05:00], next run at: 2026-03-15 17:16:58 IST)" (scheduled at 2026-03-15 17:11:58.912125+05:30)
+2026-03-15 17:11:58,922 | INFO     | climashield.oracle_worker      | [WORKER] Starting oracle monitoring cycle…
+2026-03-15 17:11:58,927 | INFO     | climashield.oracle_worker      | Monitoring cycle started
+2026-03-15 17:11:59,127 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 17:11:59,128 | INFO     | climashield.weather            | [LIVE] Fetched real weather for mumbai: {'city': 'mumbai', 'rain_mm': 0.0, 'temperature': 28, 'humidity': 64, 'source': 'openweathermap'}
+2026-03-15 17:11:59,129 | INFO     | climashield.oracle_monitor     | [ORACLE] mumbai: alert_level=normal, exceeded=0
+2026-03-15 17:11:59,129 | INFO     | climashield.oracle_worker      | [WORKER] mumbai: all conditions normal
+2026-03-15 17:11:59,377 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Jaipur&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 17:11:59,378 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Jaipur: {'city': 'Jaipur', 'rain_mm': 0.0, 'temperature': 32.25, 'humidity': 10, 'source': 'openweathermap'}
+2026-03-15 17:11:59,378 | INFO     | climashield.oracle_monitor     | [ORACLE] Jaipur: alert_level=normal, exceeded=0
+2026-03-15 17:11:59,378 | INFO     | climashield.oracle_worker      | [WORKER] Jaipur: all conditions normal
+2026-03-15 17:11:59,549 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Chennai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 17:11:59,549 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Chennai: {'city': 'Chennai', 'rain_mm': 0.0, 'temperature': 27.9, 'humidity': 65, 'source': 'openweathermap'}
+2026-03-15 17:11:59,550 | INFO     | climashield.oracle_monitor     | [ORACLE] Chennai: alert_level=normal, exceeded=0
+2026-03-15 17:11:59,550 | INFO     | climashield.oracle_worker      | [WORKER] Chennai: all conditions normal
+2026-03-15 17:11:59,883 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Bokaro&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 17:11:59,884 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Bokaro: {'city': 'Bokaro', 'rain_mm': 0.0, 'temperature': 34.47, 'humidity': 13, 'source': 'openweathermap'}
+2026-03-15 17:11:59,884 | INFO     | climashield.oracle_monitor     | [ORACLE] Bokaro: alert_level=normal, exceeded=0
+2026-03-15 17:11:59,884 | INFO     | climashield.oracle_worker      | [WORKER] Bokaro: all conditions normal
+2026-03-15 17:12:00,107 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 17:12:00,108 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Mumbai: {'city': 'Mumbai', 'rain_mm': 0.0, 'temperature': 28, 'humidity': 64, 'source': 'openweathermap'}
+2026-03-15 17:12:00,108 | INFO     | climashield.oracle_monitor     | [ORACLE] Mumbai: alert_level=normal, exceeded=0
+2026-03-15 17:12:00,108 | INFO     | climashield.oracle_worker      | [WORKER] Mumbai: all conditions normal
+2026-03-15 17:12:00,233 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestCity&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 17:12:00,235 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestCity: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 17:12:00,236 | INFO     | climashield.oracle_monitor     | [ORACLE] TestCity: alert_level=normal, exceeded=0
+2026-03-15 17:12:00,236 | INFO     | climashield.oracle_worker      | [WORKER] TestCity: all conditions normal
+2026-03-15 17:12:00,428 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=TestDeploy&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 404 Not Found"
+2026-03-15 17:12:00,432 | WARNING  | climashield.weather            | [API ERROR] OpenWeatherMap returned 404 for TestDeploy: {"cod":"404","message":"city not found"} – falling back to mock data
+2026-03-15 17:12:00,432 | INFO     | climashield.oracle_monitor     | [ORACLE] TestDeploy: alert_level=normal, exceeded=0
+2026-03-15 17:12:00,433 | INFO     | climashield.oracle_worker      | [WORKER] TestDeploy: all conditions normal
+2026-03-15 17:12:00,581 | INFO     | httpx                          | HTTP Request: GET https://api.openweathermap.org/data/2.5/weather?q=Noida&appid=fe37b4385151e85658161f4c1351e6e7&units=metric "HTTP/1.1 200 OK"
+2026-03-15 17:12:00,582 | INFO     | climashield.weather            | [LIVE] Fetched real weather for Noida: {'city': 'Noida', 'rain_mm': 0.0, 'temperature': 30.43, 'humidity': 22, 'source': 'openweathermap'}
+2026-03-15 17:12:00,582 | INFO     | climashield.oracle_monitor     | [ORACLE] Noida: alert_level=normal, exceeded=0
+2026-03-15 17:12:00,582 | INFO     | climashield.oracle_worker      | [WORKER] Noida: all conditions normal
+2026-03-15 17:12:00,582 | INFO     | climashield.oracle_worker      | Cycle complete: 8 cities, 0 triggers
+2026-03-15 17:12:00,582 | INFO     | climashield.oracle_worker      | [WORKER] Cycle complete: 8 cities, 10 policies, 0 triggers
+2026-03-15 17:12:00,583 | INFO     | climashield.scheduler          | [SCHEDULER] Oracle check complete: 0 triggers
+2026-03-15 17:12:00,583 | INFO     | apscheduler.executors.default  | Job "Oracle Weather Monitoring (trigger: interval[0:05:00], next run at: 2026-03-15 17:16:58 IST)" executed successfully
+2026-03-15 17:13:33,425 | INFO     | climashield.scheduler          | [SCHEDULER] Scheduler stopped
+2026-03-15 17:13:33,433 | INFO     | climashield.system             | ClimaShield shutting down
+2026-03-15 17:13:33,438 | INFO     | apscheduler.scheduler          | Scheduler has been shut down

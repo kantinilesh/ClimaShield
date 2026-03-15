@@ -1,0 +1,82 @@
+{
+  "total_collected": 154.0,
+  "total_paid_out": 30.0,
+  "available_liquidity": 124.0,
+  "reserved_for_claims": 0,
+  "transactions": [
+    {
+      "type": "premium_deposit",
+      "payment_id": "PAY-5D12156E",
+      "policy_id": "CS1008",
+      "amount": 42.0,
+      "tx_hash": "0x26a19bc7d62dd7fb6bd8692dee93e75b5d2db416214ce7a243136426b3ba79d0",
+      "timestamp": "2026-03-15T10:39:29.248934Z"
+    },
+    {
+      "type": "claim_reserve",
+      "claim_id": "CLM-SIM-BBF6BD",
+      "amount": 10.0,
+      "timestamp": "2026-03-15T10:39:29.294145Z"
+    },
+    {
+      "type": "claim_payout",
+      "claim_id": "CLM-SIM-BBF6BD",
+      "amount": 10.0,
+      "tx_hash": "0xf0ec058788322c5f0317b2ca8bfb77a7f6696a0ff58ced6948a35561fd44680c",
+      "wallet": "unspecified",
+      "timestamp": "2026-03-15T10:39:29.294724Z"
+    },
+    {
+      "type": "premium_deposit",
+      "payment_id": "PAY-E3DCB85F",
+      "policy_id": "CS1008",
+      "amount": 42.0,
+      "tx_hash": "0x8938f22d2e3ec2dffc288f4fc4ece8f3e06f7502e47c09edfc4560ea9dc77c85",
+      "timestamp": "2026-03-15T10:56:30.495331Z"
+    },
+    {
+      "type": "claim_reserve",
+      "claim_id": "CLM-SIM-D701A8",
+      "amount": 10.0,
+      "timestamp": "2026-03-15T10:56:44.634397Z"
+    },
+    {
+      "type": "claim_payout",
+      "claim_id": "CLM-SIM-D701A8",
+      "amount": 10.0,
+      "tx_hash": "0xff9e3679a628c78eb5d8b90af7cc3cf18bc940f4db9a55988594bf6d73244458",
+      "wallet": "unspecified",
+      "timestamp": "2026-03-15T10:56:48.859189Z"
+    },
+    {
+      "type": "claim_reserve",
+      "claim_id": "CLM-SIM-5A5C35",
+      "amount": 10.0,
+      "timestamp": "2026-03-15T11:12:42.295188Z"
+    },
+    {
+      "type": "claim_payout",
+      "claim_id": "CLM-SIM-5A5C35",
+      "amount": 10.0,
+      "tx_hash": "0xb2784f09687aad7623973e4add5439d897f8fddfe00bc2580628c9e625e8fa89",
+      "wallet": "unspecified",
+      "timestamp": "2026-03-15T11:12:44.866028Z"
+    },
+    {
+      "type": "premium_deposit",
+      "payment_id": "PAY-155C7E83",
+      "policy_id": "CS1010",
+      "amount": 36.0,
+      "tx_hash": "0x4c4bf53517730ff80718aa49fe70056c63f2da518910f71e7235b162ebde7145",
+      "timestamp": "2026-03-15T11:24:12.228992Z"
+    },
+    {
+      "type": "premium_deposit",
+      "payment_id": "PAY-9DEE7504",
+      "policy_id": "CS1012",
+      "amount": 34.0,
+      "tx_hash": "0x428f5dd84cdb721c7658cc4fe0a2113ac7556bfc46c659cffdaee3f92829fc5e",
+      "timestamp": "2026-03-15T12:00:11.044536Z"
+    }
+  ]
+}

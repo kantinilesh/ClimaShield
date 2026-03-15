@@ -1,0 +1,122 @@
+[
+  {
+    "policy_id": "CS1001",
+    "user_wallet": "string",
+    "location": "mumbai",
+    "coverage_type": "rainfall",
+    "trigger_threshold": 40.0,
+    "premium_weekly": 58.0,
+    "coverage_amount": 500.0,
+    "status": "active"
+  },
+  {
+    "policy_id": "CS1002",
+    "user_wallet": "string",
+    "location": "mumbai",
+    "coverage_type": "rainfall",
+    "trigger_threshold": 40.0,
+    "premium_weekly": 58.0,
+    "coverage_amount": 500.0,
+    "status": "active"
+  },
+  {
+    "policy_id": "CS1003",
+    "user_wallet": "string",
+    "location": "Jaipur",
+    "coverage_type": "rainfall",
+    "trigger_threshold": 40.0,
+    "premium_weekly": 48.0,
+    "coverage_amount": 500.0,
+    "status": "active"
+  },
+  {
+    "policy_id": "CS1004",
+    "user_wallet": "string",
+    "location": "Chennai",
+    "coverage_type": "rainfall",
+    "trigger_threshold": 40.0,
+    "premium_weekly": 52.0,
+    "coverage_amount": 500.0,
+    "status": "active"
+  },
+  {
+    "policy_id": "CS1005",
+    "user_wallet": "string",
+    "location": "Bokaro",
+    "coverage_type": "rainfall",
+    "trigger_threshold": 40.0,
+    "premium_weekly": 48.0,
+    "coverage_amount": 500.0,
+    "status": "active"
+  },
+  {
+    "policy_id": "CS1006",
+    "user_wallet": null,
+    "location": "Mumbai",
+    "coverage_type": "rainfall",
+    "trigger_threshold": 40.0,
+    "premium_weekly": 33.0,
+    "coverage_amount": 500.0,
+    "status": "active"
+  },
+  {
+    "policy_id": "CS1007",
+    "user_wallet": null,
+    "location": "Chennai",
+    "coverage_type": "temperature",
+    "trigger_threshold": 42.0,
+    "premium_weekly": 33.0,
+    "coverage_amount": 500.0,
+    "status": "active"
+  },
+  {
+    "policy_id": "CS1008",
+    "user_wallet": null,
+    "location": "TestCity",
+    "coverage_type": "rainfall",
+    "trigger_threshold": 40.0,
+    "premium_weekly": 42.0,
+    "coverage_amount": 10.0,
+    "status": "active"
+  },
+  {
+    "policy_id": "CS1009",
+    "user_wallet": null,
+    "location": "TestDeploy",
+    "coverage_type": "rainfall",
+    "trigger_threshold": 40.0,
+    "premium_weekly": 42.0,
+    "coverage_amount": 10.0,
+    "status": "active"
+  },
+  {
+    "policy_id": "CS1010",
+    "user_wallet": null,
+    "location": "Noida",
+    "coverage_type": "rainfall",
+    "trigger_threshold": 40.0,
+    "premium_weekly": 36.0,
+    "coverage_amount": 10.0,
+    "status": "active"
+  },
+  {
+    "policy_id": "CS1011",
+    "user_wallet": null,
+    "location": "Delhi",
+    "coverage_type": "aqi",
+    "trigger_threshold": 300.0,
+    "premium_weekly": 35.0,
+    "coverage_amount": 10.0,
+    "status": "active"
+  },
+  {
+    "policy_id": "CS1012",
+    "user_wallet": null,
+    "location": "Mumbai",
+    "coverage_type": "rainfall",
+    "trigger_threshold": 40.0,
+    "premium_weekly": 34.0,
+    "coverage_amount": 10.0,
+    "status": "active"
+  }
+]

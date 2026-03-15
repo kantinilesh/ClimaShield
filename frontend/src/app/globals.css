@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.15); }
+
+/* Glass card */
+.glass { background: rgba(15,20,32,0.7); backdrop-filter: blur(12px); }
+
+/* Glow */
+.glow-emerald { box-shadow: 0 0 40px rgba(52,211,153,0.06); }
+
+/* Animate */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.animate-in { animation: fadeIn 0.4s ease-out both; }
