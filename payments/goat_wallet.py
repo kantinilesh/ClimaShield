@@ -19,9 +19,9 @@ logger = logging.getLogger("climashield.goat_wallet")
 # Connect to GOAT Testnet3
 w3 = Web3(Web3.HTTPProvider(settings.goat_rpc_url))
 
-# Tiny payout amounts (in wei) to preserve testnet balance
-# 1 wei = 0.000000000000000001 BTC
-PAYOUT_WEI = 100  # 100 wei per claim payout (essentially free)
+# Payout amount in wei – enough to see balance change
+# 0.0001 BTC = 100_000_000_000_000 wei (visible on explorer)
+PAYOUT_WEI = 100_000_000_000_000  # 0.0001 BTC per claim payout
 
 
 def _get_account():

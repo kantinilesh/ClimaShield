@@ -77,7 +77,7 @@ def deposit_premium(
     _save_treasury(treasury)
 
     logger.info(
-        f"[TREASURY] Deposit: +{amount} USDC from {policy_id} "
+        f"[TREASURY] Deposit: +{amount} BTC from {policy_id} "
         f"(total: {treasury['total_collected']})"
     )
 
@@ -111,7 +111,7 @@ def reserve_for_claim(claim_id: str, amount: float) -> dict:
 
     _save_treasury(treasury)
 
-    logger.info(f"[TREASURY] Reserved {amount} USDC for claim {claim_id}")
+    logger.info(f"[TREASURY] Reserved {amount} BTC for claim {claim_id}")
     return {"success": True, "reason": "Funds reserved", "treasury": get_status()}
 
 
@@ -149,7 +149,7 @@ def execute_payout(
     _save_treasury(treasury)
 
     logger.info(
-        f"[TREASURY] Payout: -{amount} USDC for {claim_id} → {wallet[:12]}... "
+        f"[TREASURY] Payout: -{amount} BTC for {claim_id} → {wallet[:12]}... "
         f"(remaining: {treasury['available_liquidity']})"
     )
 
@@ -176,6 +176,6 @@ def get_status() -> dict:
         "available_liquidity": treasury["available_liquidity"],
         "reserved_for_claims": treasury["reserved_for_claims"],
         "transaction_count": len(treasury["transactions"]),
-        "currency": "USDC",
+        "currency": "BTC",
         "network": "goat_testnet3",
     }

@@ -48,17 +48,17 @@ DEFAULT_THRESHOLDS = {
 
 # Default premiums per coverage type (low for testnet testing)
 DEFAULT_PREMIUMS = {
-    "rainfall": 2.0,       # USDC
-    "temperature": 3.0,    # USDC
-    "aqi": 2.0,            # USDC
-    "flood_alert": 5.0,    # USDC
+    "rainfall": 2.0,       # BTC
+    "temperature": 3.0,    # BTC
+    "aqi": 2.0,            # BTC
+    "flood_alert": 5.0,    # BTC
 }
 
 # Default coverage amounts (low for testnet testing)
 DEFAULT_COVERAGE = {
-    "rainfall": 10.0,      # USDC
-    "temperature": 15.0,   # USDC
-    "aqi": 10.0,           # USDC
-    "flood_alert": 12.0,   # USDC
+    "rainfall": 10.0,      # BTC
+    "temperature": 15.0,   # BTC
+    "aqi": 10.0,           # BTC
+    "flood_alert": 12.0,   # BTC
 }
 

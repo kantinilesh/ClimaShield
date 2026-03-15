@@ -304,7 +304,7 @@ async def pay_premium(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
         response = (
             f"✅ *Premium Paid!*\n\n"
             f"📋 Policy: `{policy_id}`\n"
-            f"💰 Amount: {policy.premium_weekly} USDC\n"
+            f"💰 Amount: {policy.premium_weekly} BTC\n"
             f"🔗 Tx: `{payment['tx_hash'][:20]}...`\n"
             f"📊 Status: {payment['status']}\n"
             f"🌐 Protocol: x402 on GOAT Testnet3"
@@ -364,7 +364,7 @@ async def claim_status(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         response = (
             f"🚨 *CLAIM PROCESSED!*\n\n"
             f"⚡ {trigger_result['trigger_reason']}\n\n"
-            f"💰 *Payout: {payout.get('amount', 0)} USDC*\n"
+            f"💰 *Payout: {payout.get('amount', 0)} BTC*\n"
             f"🔗 Tx: `{payout.get('tx_hash', 'N/A')[:20]}...`\n"
             f"🎫 Claim: `{claim.get('claim_id', 'N/A')}`\n"
             f"📊 Status: `{payout.get('status', 'N/A')}`\n"
@@ -382,10 +382,10 @@ async def treasury(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         status = get_treasury_status()
         response = (
             f"🏦 *Treasury Status*\n\n"
-            f"💰 Collected: {status['total_collected']} USDC\n"
-            f"💸 Paid Out: {status['total_paid_out']} USDC\n"
-            f"💧 Available: {status['available_liquidity']} USDC\n"
-            f"🔒 Reserved: {status['reserved_for_claims']} USDC\n"
+            f"💰 Collected: {status['total_collected']} BTC\n"
+            f"💸 Paid Out: {status['total_paid_out']} BTC\n"
+            f"💧 Available: {status['available_liquidity']} BTC\n"
+            f"🔒 Reserved: {status['reserved_for_claims']} BTC\n"
             f"📊 Transactions: {status['transaction_count']}\n"
             f"🌐 Network: GOAT Testnet3"
         )
@@ -460,7 +460,7 @@ async def demo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
         f"🔍 *Step 2: AI Claim Verification*\n\n"
         f"📋 Policy: `{policy_id}`\n"
-        f"🛡️ Coverage: {target.get('coverage_amount', 500)} USDC\n"
+        f"🛡️ Coverage: {target.get('coverage_amount', 500)} BTC\n"
         f"⚡ Trigger: rainfall > {target.get('trigger_threshold', 40)}mm\n"
         f"🌧️ Actual: *{rain_mm}mm* ← EXCEEDED ✅\n\n"
         f"🤖 ClaimVerificationAgent validating…\n"
@@ -504,7 +504,7 @@ async def demo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             f"🌧️ Event: Heavy Rainfall ({rain_mm}mm)\n"
             f"📍 City: {city}\n"
             f"📋 Policy: `{policy_id}`\n"
-            f"💰 *Payout: {payout.get('amount', payout_amount)} USDC*\n"
+            f"💰 *Payout: {payout.get('amount', payout_amount)} BTC*\n"
             f"🔗 Tx: `{tx_hash[:24]}...`\n"
             f"🌐 GOAT Testnet3 (Chain 48816)\n"
             f"📊 Status: ✅ {payout.get('status', 'completed')}\n"
@@ -546,8 +546,8 @@ async def demo_full(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             f"📋 ID: `{policy.policy_id}`\n"
             f"📍 {policy.location} | {policy.coverage_type}\n"
             f"⚡ Trigger: > {policy.trigger_threshold}mm\n"
-            f"💰 Premium: {policy.premium_weekly} USDC/week\n"
-            f"🛡️ Coverage: {policy.coverage_amount} USDC",
+            f"💰 Premium: {policy.premium_weekly} BTC/week\n"
+            f"🛡️ Coverage: {policy.coverage_amount} BTC",
             parse_mode="Markdown",
         )
         await asyncio.sleep(1.5)
@@ -572,7 +572,7 @@ async def demo_full(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             )
         await update.message.reply_text(
             f"✅ *Step 2: Premium Paid*\n\n"
-            f"💳 Amount: {policy.premium_weekly} USDC\n"
+            f"💳 Amount: {policy.premium_weekly} BTC\n"
             f"🔗 Tx: `{payment['tx_hash'][:20]}...`\n"
             f"📡 Protocol: x402 on GOAT Testnet3",
             parse_mode="Markdown",
@@ -614,7 +614,7 @@ async def demo_full(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await update.message.reply_text(
             f"✅ *Step 4: Claim Paid!*\n\n"
             f"🤖 AI Agent: Verified ✅\n"
-            f"💰 *Payout: {payout.get('amount', policy.coverage_amount)} USDC*\n"
+            f"💰 *Payout: {payout.get('amount', policy.coverage_amount)} BTC*\n"
             f"🔗 Tx: `{tx_hash[:24]}...`\n"
             f"📊 Status: {payout.get('status', 'completed')}\n"
             f"🔗 [Explorer]({explorer})",
@@ -629,9 +629,9 @@ async def demo_full(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         t_status = get_treasury_status()
         await update.message.reply_text(
             f"✅ *Step 5: Treasury Updated*\n\n"
-            f"💰 Collected: {t_status['total_collected']} USDC\n"
-            f"💸 Paid Out: {t_status['total_paid_out']} USDC\n"
-            f"💧 Available: {t_status['available_liquidity']} USDC\n"
+            f"💰 Collected: {t_status['total_collected']} BTC\n"
+            f"💸 Paid Out: {t_status['total_paid_out']} BTC\n"
+            f"💧 Available: {t_status['available_liquidity']} BTC\n"
             f"📊 Transactions: {t_status['transaction_count']}",
             parse_mode="Markdown",
         )
@@ -716,7 +716,7 @@ async def demo_aqi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
         f"🔍 *Step 2: AI Claim Verification*\n\n"
         f"📋 Policy: `{policy_id}`\n"
-        f"🛡️ Coverage: {target.get('coverage_amount', 10)} USDC\n"
+        f"🛡️ Coverage: {target.get('coverage_amount', 10)} BTC\n"
         f"⚡ Trigger: AQI > {target.get('trigger_threshold', threshold)}\n"
         f"💨 Actual AQI: *{aqi_value}* ← EXCEEDED ✅\n\n"
         f"🤖 ClaimVerificationAgent validating…\n"
@@ -760,7 +760,7 @@ async def demo_aqi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             f"💨 Event: Dangerous AQI ({aqi_value})\n"
             f"📍 City: {city}\n"
             f"📋 Policy: `{policy_id}`\n"
-            f"💰 *Payout: {payout.get('amount', payout_amount)} USDC*\n"
+            f"💰 *Payout: {payout.get('amount', payout_amount)} BTC*\n"
             f"🔗 Tx: `{tx_hash[:24]}...`\n"
             f"🌐 GOAT Testnet3 (Chain 48816)\n"
             f"📊 Status: ✅ {payout.get('status', 'completed')}\n"

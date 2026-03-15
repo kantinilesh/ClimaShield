@@ -58,7 +58,7 @@ async def process_claim_payout(
             "treasury_status": { ... }
         }
     """
-    logger.info(f"[PAYOUT] Processing payout for claim {claim_id}: {payout_amount} USDC")
+    logger.info(f"[PAYOUT] Processing payout for claim {claim_id}: {payout_amount} BTC")
 
     # Step 1: Fraud prevention checks
     fraud_check = _fraud_prevention_check(
@@ -120,7 +120,7 @@ async def process_claim_payout(
         "claim_id": claim_id,
         "policy_id": policy_id,
         "amount": payout_amount,
-        "currency": "USDC",
+        "currency": "BTC",
         "tx_hash": tx_result["tx_hash"],
         "block_number": tx_result["block_number"],
         "explorer_url": tx_result["explorer_url"],
@@ -131,7 +131,7 @@ async def process_claim_payout(
     }
 
     logger.info(
-        f"[PAYOUT] Claim {claim_id} paid: {payout_amount} USDC → "
+        f"[PAYOUT] Claim {claim_id} paid: {payout_amount} BTC → "
         f"tx={tx_result['tx_hash'][:18]}..."
     )
 

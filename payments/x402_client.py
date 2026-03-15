@@ -26,7 +26,7 @@ logger = logging.getLogger("climashield.x402")
 async def create_payment_request(
     policy_id: str,
     amount: float,
-    currency: str = "USDC",
+    currency: str = "BTC",
     description: str = "Weekly insurance premium",
 ) -> dict:
     """
@@ -204,7 +204,7 @@ async def collect_premium(
         "payment_id": request["payment_id"],
         "policy_id": policy_id,
         "amount": premium_amount,
-        "currency": "USDC",
+        "currency": "BTC",
         "user_wallet": user_wallet,
         "receive_wallet": settings.receive_wallet,
         "status": "completed" if verification.get("verified") else "failed",
